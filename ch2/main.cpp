@@ -33,7 +33,7 @@ void test_swap_pairs();//2.2.8
 void test_section2_2_10();
 int main()
 {
-  test_section2_1_22();
+  test_section2_1_1();
   return 0;
 }
 void test_section2_1_1()
