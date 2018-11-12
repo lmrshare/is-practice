@@ -5,5 +5,5 @@
 
 ### Reference
 
-[1. leetcode](https://leetcode.com)
-[2.soulmachine](https://github.com/soulmachine/leetcode)
++ [[1] leetcode](https://leetcode.com)
++ [[2] soulmachine](https://github.com/soulmachine/leetcode)
