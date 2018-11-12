@@ -1,0 +1,3 @@
+/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeFiles/ch2.dir
+/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeFiles/ALL_BUILD.dir
+/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeFiles/ZERO_CHECK.dir
