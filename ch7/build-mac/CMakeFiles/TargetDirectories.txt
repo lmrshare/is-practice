@@ -1,0 +1,3 @@
+/Users/linmengran-mac2/work/code_practice/is-practice/ch7/build-mac/CMakeFiles/ch7.dir
+/Users/linmengran-mac2/work/code_practice/is-practice/ch7/build-mac/CMakeFiles/ALL_BUILD.dir
+/Users/linmengran-mac2/work/code_practice/is-practice/ch7/build-mac/CMakeFiles/ZERO_CHECK.dir
