@@ -10,11 +10,22 @@ using namespace std;
 
 namespace p7
 {
-  class sectionn_n_n
+  class section_7_1
   {
     public:
-      //n.n.n demo function
-      int demofunction(vector<int>& nums);
+      vector<int> searchRange(vector<int>& nums, int target);
+  };
+
+  class section_7_2
+  {
+    public:
+        int searchInsert(vector<int>& nums, int target);
+  };
+
+  class section_7_3 
+  {
+    public:
+        bool searchMatrix(vector<vector<int>>& matrix, int target);
   };
 }
 #endif
