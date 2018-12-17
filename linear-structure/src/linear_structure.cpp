@@ -1,4 +1,6 @@
 #include "linear_structure.h"
+#include <functional>
+#include <stack>
 
 namespace ls
 {
@@ -8,6 +10,16 @@ namespace ls
         for(auto & val : res)
             cout << val << ", ";
         cout << "]";
+    }
+    void printListNode(ListNode* res)
+    {
+        cout << "[" << endl;
+        while(res != nullptr)
+        {
+            cout << res->val << ", ";
+            res = res->next;
+        }
+        cout << "]" << endl;
     }
     string lc344::reverseString(string s)
     {
@@ -93,6 +105,115 @@ namespace ls
                 res.insert(res.begin(), 1);
             cb = p--;
         }
+        return res;
+    }
+    ListNode* lc876::middleNode(ListNode* head)
+    {
+        if(nullptr == head || nullptr == head->next) return head;
+        ListNode *slow = head;
+        ListNode *fast = head->next;
+        while(nullptr != fast)
+        {
+            fast = fast->next;
+            if(nullptr != fast) fast = fast->next;
+            slow = slow->next;
+        }
+        return slow;
+    }
+    int lc817::numComponents(ListNode* head, vector<int>& G)
+    {
+        size_t n = G.size();
+        if(nullptr == head || 0 == n) return 0;
+        while(nullptr != head)
+        {
+            link_component[vector<int>{head->val, head->val}] = true;
+            if(nullptr != head->next)
+                link_component[vector<int>{head->val, head->next->val}] = true;
+            head = head->next;
+        }
+        int res = 0;
+        int i = 0;
+        while(!G.empty())
+        {
+            vector<int>::iterator it = G.begin()+i;
+            if(it < G.end()-1)//at least two elements
+            {
+                for(int j=1; it+j < G.end(); ++j)
+                {
+                    if(link_component[vector<int>{*it, *(it+j)}])
+                    {
+                        res++;
+                        G.erase(it, it+2);
+                        break;
+                    }
+                }
+                ++i;
+            }
+            else
+            {
+                while(!G.empty())
+                {
+                    res++;
+                    G.erase(it);
+                    it = G.end()-1;
+                }
+            }
+        }
+        return res;
+    }
+    int lc682::calPoints(vector<string>& ops)
+    {
+        size_t n = ops.size();
+        if(1 == n && ("C" == ops[0] || "D" == ops[0] || "+" == ops[0])) return 0;
+        stack<int> s;
+        for(size_t i = 0; i < n; ++i)
+        {
+            if("+" == ops[i])
+            {
+                int val1 = s.top();
+                s.pop();
+                int val2 = s.top();
+                s.pop();
+                s.push(val2);
+                s.push(val1);
+                s.push(val1+val2);
+            }
+            else if("C" == ops[i])
+                s.pop();
+            else if("D" == ops[i])
+                s.push(s.top()*2);
+            else
+                s.push(stoi(ops[i]));
+        }
+        int sum = 0;
+        while(!s.empty())
+        {
+            sum += s.top();
+            s.pop();
+        }
+        return sum;
+    }
+    int lc921::minAddToMakeValid(string S)
+    {
+        if(0 == S.size()) return 0;
+        stack<char> ls;//only store "("
+        int res = 0;
+        for(auto & c : S)
+        {
+            switch(c)
+            {
+                case '(':
+                    ls.push('(');
+                    break;
+                case ')':
+                    if(ls.empty()) res++;
+                    else ls.pop();
+                    break;
+                default:
+                    return -1;
+            }
+        }
+        res += ls.size();
         return res;
     }
 }

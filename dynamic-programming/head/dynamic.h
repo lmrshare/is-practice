@@ -10,7 +10,14 @@ using namespace std;
 
 namespace dp
 {
+    //tool function
+    void print_vector(const vector<int>& nums);
     //Strategy/Solution Tree and Basic Dynamic Programming
+    class lc338 //Counting Bits, bit manipulation
+    {
+        public:
+            vector<int> countBits(int num);
+    };
     //Memorized Search
     //Advanced Dynamic Programming
     //Advanced Structure(e.g. Segment Tree, Binary Indexed Tree, etc)

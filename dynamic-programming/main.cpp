@@ -4,10 +4,10 @@
 void test_lc121();
 void test_lc53();
 void test_lc198();
-
+void test_lc338();
 int main()
 {
-    test_lc198();
+    test_lc338();
     return 0;
 }
 void test_lc121()
@@ -30,4 +30,11 @@ void test_lc198()
     vector<int> nums{2,7,9,3,1};//{1,2,3,1};
     int money = C->rob(nums);
     cout << "Robbed money: " << money << endl;
+}
+void test_lc338()
+{
+    dp::lc338 *C = new dp::lc338();
+    int num = 5;
+    vector<int> res = C->countBits(num);
+    dp::print_vector(res);
 }

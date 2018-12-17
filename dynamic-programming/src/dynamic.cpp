@@ -2,6 +2,13 @@
 
 namespace dp
 {
+  void print_vector(const vector<int>& nums)
+  {
+      cout << "[";
+      for(auto & num : nums)
+          cout << num << " , ";
+      cout << "]\n";
+  }
   int lc121::maxProfit(vector<int>& prices)
   {
       size_t n = prices.size();
@@ -64,5 +71,25 @@ namespace dp
           fn_1 = fi;
       }
       return fi;
+  }
+  vector<int> lc338::countBits(int num)
+  {
+      vector<int> res(num+1, 0);
+      size_t len = sizeof(int) * 8;
+      for(int i = 1; i <= num; ++i)
+      {
+          if(0 == i % 2)
+          {
+#if 0
+              for(size_t j = 0; j< len; ++j)
+                  res[i] += i >> j & 1;
+#elif 1
+              res[i] = res[i>>1];//偶数的最后一位一定为0，所以右移一位没影响
+#endif
+          }
+          else
+              res[i] = res[i-1] + 1;
+      }
+      return res;
   }
 }
