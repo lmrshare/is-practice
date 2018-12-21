@@ -6,8 +6,7 @@
 #include <unordered_map>
 #include <list>
 #include <random>
-using namespace std;
-
+using namespace std; 
 namespace dp
 {
     //tool function
@@ -17,6 +16,26 @@ namespace dp
     {
         public:
             vector<int> countBits(int num);
+    };
+    class lc647 //Palindromic Substrings[考虑下怎么去除二维数组]
+    {
+        public:
+            int countSubstrings(string s);
+    };
+    class lc120 //Triangle
+    {
+        public:
+            int minimumTotal(vector<vector<int>>& triangle);            
+    };
+    class lc474 //Ones and Zeroes
+    {
+        public:
+            int findMaxForm(vector<string>& strs, int m, int n);//mine
+            int findMaxForm2(vector<string>& strs, int m, int n);//not mine(Greedy DP, beats 100%)
+        int findMaxForm3(vector<string>& strs, int m, int n);//[TODO: 明天根据case理清楚里面]
+        private:
+            int findMaxForm(vector<string>& strs, int start, int m, int n);
+            void zero_one_str(const string& str, int& zero_num, int& one_num);
     };
     //Memorized Search
     //Advanced Dynamic Programming

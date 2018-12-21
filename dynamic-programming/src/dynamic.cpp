@@ -92,4 +92,149 @@ namespace dp
       }
       return res;
   }
+  int lc647::countSubstrings(string s)
+  {
+      size_t n = s.size();
+      if(1 == n) return 1;
+      if(0 == n) return 0;
+      int res = n;
+      vector<vector<bool> > P(n-1, vector<bool>(n, false));
+      for(int i = n-2; i >= 0; --i)
+      {
+          for(int j = i; j < n; ++j)
+          {
+              if(i == j)
+              {
+                  P[i][i] = true;
+                  continue;
+              }
+              if(s[i] == s[j] && (i+1 == j || P[i+1][j-1]))
+              {
+                  res += 1;
+                  P[i][j] = true;
+              }
+          }
+      }
+      return res;
+  }
+  int lc120::minimumTotal(vector<vector<int> >& triangle)
+  {
+      size_t n = triangle.size();
+      if(0 == n) return 0;
+      if(1 == n) return triangle[0][0];
+      for(int i = n-2; i >= 0; --i)
+          for(int j = 0; j < triangle[i].size(); ++j)
+              triangle[i][j] += min(triangle[i+1][j], triangle[i+1][j+1]);
+      return triangle[0][0];
+  }
+  int lc474::findMaxForm(vector<string>& strs, int m, int n)
+  {
+      size_t num = strs.size();
+      if(0 == num) return 0;
+      if(1 == num)
+      {
+          int zero_num, one_num;
+          zero_one_str(strs[0], zero_num, one_num);
+          if(m == zero_num && n == one_num) return 1;//ok
+          else return 0;//no
+      }
+      sort(strs.begin(), strs.end(), [n,m] (string a, string b){
+          if (a.size() != b.size()) return a.size() < b.size();
+          return (m <= n) ? a < b : b > a;
+      });
+      return findMaxForm(strs, 0, m, n);
+  }
+  int lc474::findMaxForm(vector<string>& strs, int start, int m, int n)
+  {
+      //terminal condition
+      if(start >= strs.size()) return 0;
+      int zero_num, one_num;
+      zero_one_str(strs[start], zero_num, one_num);
+      //pruning
+      if(zero_num > m || one_num > n)
+          return findMaxForm(strs, start+1, m, n);
+      else
+          return max(
+                    1+findMaxForm(strs, start+1, m-zero_num, n-one_num),
+                    findMaxForm(strs, start+1, m, n)
+                );
+  }
+  void lc474::zero_one_str(const string& str, int& zero_num, int& one_num)
+  {
+      zero_num = 0;
+      one_num = 0;
+      for(const auto & c : str)
+      {
+          if(0 == c-'0')
+              zero_num++;
+          if(1 == c-'0')
+              one_num++;
+      }
+  }
+  int lc474::findMaxForm2(vector<string>& sv, int m, int n) 
+  {
+      int l = sv.size();
+      if (!l)
+      {
+          return 0;
+      }
+      sort(sv.begin(), sv.end(), [n,m] (string a, string b){
+          if (a.size() != b.size()) return a.size() < b.size();
+          return (m <= n) ? a < b : b > a;
+      });
+      
+      vector<pair<int, pair<int, int> > > dp(l + 1);
+      dp[0] = {0, {0, 0}};
+      for (int i = 1; i <= l; ++i)
+      {
+          int z = 0, o = 0;
+          for (auto& c: sv[i - 1])
+          {
+              z += (c == '0');
+              o += (c == '1');
+          }
+          dp[i] = dp[i - 1];
+          for (int j = 0; j < i; ++j)
+          {
+              if (dp[j].first + 1 > dp[i].first &&
+                  dp[j].second.first + z <= m &&
+                  dp[j].second.second + o <= n)
+              {
+                  dp[i].first = dp[j].first + 1;
+                  dp[i].second = {dp[j].second.first + z, dp[j].second.second + o};
+              }
+              else if (dp[j].first + 1 == dp[i].first &&
+                       (
+                        (dp[j].second.first + z < dp[i].second.first && dp[j].second.second + o <= n )||
+                        (dp[j].second.second + o < dp[i].second.second && dp[j].second.first + z <= m)
+                        )
+                       )
+              {
+                  dp[i].second = {dp[j].second.first + z, dp[j].second.second + o};
+              }
+          }
+      }
+      
+      int ans = 0;
+      for (int i = 1; i <= l; ++i)
+      {
+          ans = max(dp[i].first, ans);
+      }
+      
+      return ans;
+   }
+    int lc474::findMaxForm3(vector<string>& strs, int m, int n)
+    {
+        vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
+        for (string str : strs) {
+            int zeros = 0, ones = 0;
+            for (char c : str) (c == '0') ? ++zeros : ++ones;
+            for (int i = m; i >= zeros; --i) {
+                for (int j = n; j >= ones; --j) {
+                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1);
+                }
+            }
+        }
+        return dp[m][n];
+    }
 }
