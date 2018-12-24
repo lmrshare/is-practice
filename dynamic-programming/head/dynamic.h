@@ -37,6 +37,26 @@ namespace dp
             int findMaxForm(vector<string>& strs, int start, int m, int n);
             void zero_one_str(const string& str, int& zero_num, int& one_num);
     };
+    class lcc5 //最长回文
+    {
+        public:
+            string longestPalindrome(string s);//递归, 超出时间限制
+            string longestPalindrome2(string s);//a. 非递归, 超出时间限制
+            string longestPalindrome3(string s);//b. 非递归, 不用isPalindrome, ac
+            /*
+             *方案a和方案b其实差不多, 只不过把isPalindrome这个函数换掉, 用空间换时间, 把中间的是否为回文的判断结果存起来
+             *
+             * */
+        private:
+            string longestPalindrome(const string& s, int index);
+            bool isPalindrome(const string& str);
+
+    };
+    class lccxxx //正则表达式匹配, 字符串、动态规划、回溯. TODO: 剩余: 把s长度为0的情况单独抽取出来处理
+    {
+        public:
+            bool isMatch(const char *s, const char *p);
+    };
     //Memorized Search
     //Advanced Dynamic Programming
     //Advanced Structure(e.g. Segment Tree, Binary Indexed Tree, etc)

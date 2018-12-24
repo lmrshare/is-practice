@@ -216,4 +216,49 @@ namespace ls
         res += ls.size();
         return res;
     }
+    ListNode* lcc2::addTwoNumbers(ListNode* l1, ListNode* l2)
+    {
+        if(nullptr == l1) return l2;
+        if(nullptr == l2) return l1;
+        ListNode *res = nullptr;
+        ListNode *c = nullptr;
+        int flag = 0;
+        while(nullptr != l1 || nullptr != l2)
+        {
+            if(nullptr == res)
+            {
+                res = new ListNode(0);
+                c = res;
+            }
+            else
+            {
+                c->next = new ListNode(0);
+                c = c->next;
+            }
+
+            if(nullptr != l1)
+            {
+                flag += l1->val;
+                l1 = l1->next;
+            }
+            if(nullptr != l2)
+            {
+                flag += l2->val;
+                l2 = l2->next;
+            }
+            if(flag >= 10)
+            {
+                c->val = flag-10;
+                flag = 1;
+            }
+            else
+            {
+                c->val = flag;
+                flag = 0;
+            }
+        }
+        if(flag > 0)
+            c->next = new ListNode(flag);
+        return res;
+    }
 }

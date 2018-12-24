@@ -49,6 +49,11 @@ namespace ls
             //std::hash<std::vector<int> > link_component;
             std::map<std::vector<int>, bool> link_component;
     };
+    class lcc2//两数相加
+    {
+        public:
+            ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+    };
     //Queue, Deque
     //Stack
     class lc682// Baseball Game

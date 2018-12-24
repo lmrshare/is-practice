@@ -237,4 +237,173 @@ namespace dp
         }
         return dp[m][n];
     }
+    string lcc5::longestPalindrome(string s)
+    {
+        if(0 == s.size()) return "";
+        if(1 == s.size()) return s;
+        string str = longestPalindrome(s.substr(1, s.size()-1));
+        string res; 
+        if(s.substr(1, str.size()) == str)
+        {
+            size_t n = str.size();
+            res = str.substr(0, n);
+            for(size_t i = n+1; i <= s.size(); ++i)
+                if(isPalindrome(s.substr(0, i)))
+                    res = s.substr(0, i);
+        }
+        else
+        {
+            res = s.substr(0, 1);
+            for(size_t i = 2; i <= s.size(); ++i)
+                if(isPalindrome(s.substr(0, i)))
+                    res = s.substr(0, i);
+            if(res.size() < str.size())
+                res = str;
+        }
+        return res;
+    }
+    string lcc5::longestPalindrome(const string& s, int index)
+    {
+        if(0 == s.size()) return "";
+        if(1 == s.size()) return s;
+
+    }
+    bool lcc5::isPalindrome(const string& str)
+    {
+#if 0
+        if(0 == str.size() || 1 == str.size()) return true;
+        if(str[0] == str[str.size()-1] && isPalindrome(str.substr(1, str.size()-2)))
+            return true;
+        else
+            return false;
+#elif 1
+        size_t n = str.size();
+        for(size_t i = 0; i < n/2; ++i)
+            if(str[i] != str[n-1-i])
+                return false;
+        return true;
+#endif
+    }
+    string lcc5::longestPalindrome2(string s)
+    {
+        size_t n = s.size();
+        if(0 == n || 1 == n) return s;
+        string res(s.substr(n-1, 1));
+        string fs;
+        for(int i = n-1; i>=0; --i)
+        {
+            fs = s[i];
+            for(int j = i+1; j < n; ++j)
+                if(isPalindrome(s.substr(i, j-i+1)))
+                    fs = s.substr(i, j-i+1);
+            if(fs.size() > res.size())
+                res = fs;
+        }
+        return res;
+    }
+    string lcc5::longestPalindrome3(string s)//非递归, 不用isPalindrome
+    {
+        size_t n = s.size();
+        if(0 == n || 1 == n) return s;
+        string res(s.substr(n-1, 1));
+        string fs;
+        vector<vector<bool> >P(n, vector<bool>(n, false));
+        for(int i = n-1; i>=0; --i)
+        {
+            fs = s[i];
+            P[i][i] = true;
+            for(int j = i+1; j < n; ++j)
+            {
+                if(j == i+1 && s[j] == s[i] ||
+                   s[j] == s[i] && P[i+1][j-1])
+                {
+                    fs = s.substr(i, j-i+1);
+                    P[i][j] = true;
+                    continue;
+                }
+            }
+            if(fs.size() > res.size())
+                res = fs;
+        }
+        return res;
+    }   
+    bool lccxxx::isMatch(const char *s, const char *p)
+    {
+        int ns = sizeof(s)/sizeof(char);
+        int np = sizeof(p)/sizeof(char);
+        if(0 == ns && 0 == np) return true;
+        if(0 == np) return false;
+        if(0 == ns)
+        {
+//            if(p[0])
+        }
+        const char *ss = s;
+        const char *sp = p;
+        for(const char *fp = p; fp < p+np; ++fp)
+        {
+            if(*fp == '.')
+            {
+                if(fp-sp+1 > s+ns-ss)
+                    return false;
+                while(sp != fp)
+                    if(*sp++ != *ss++)
+                        return false;
+                ++ss;
+            }
+            else if(*fp == '*')
+            {
+                if(*sp != '*')//the first character is letter
+                {
+                    while(fp-sp > 1)
+                    {
+                        if(ss-s == ns) return false;
+                        if(*sp++ != *ss++) return false;
+                    }
+                    //fp-sp == 1
+                    if(ss-s ==ns || *sp != *ss)
+                    {
+                        //the case: [a, c*]
+                        sp+=2;
+                    }
+                    else
+                    {
+                        //the case: [a, a*]
+                        sp++;
+                        ss++;
+                        //then the case: [a, *]
+                        const char *fs = ss;
+                        while(fs+1-s < ns && *fs == *(fs+1))//all case
+                        {
+                            if(isMatch(fs+1, fp+1))return true;
+                            fs++;
+                        }
+                        if(fs-s == ns) 
+                        {
+
+                        }
+                        if(isMatch(fs+1, fp+1)) return true;
+                    }
+                }
+                else//the first character is *, also means that sp == fp
+                {
+                     //then the case: [a, *]
+                     const char *fs = ss;
+                     while(*fs == *(fs+1))//all case
+                     {
+                         if(isMatch(fs+1, fp+1))return true;
+                         fs++;
+                     }
+                     if(isMatch(fs+1, fp+1)) return true;
+                }
+            }
+            else if(fp == p+np-1)
+            {
+                if(s+ns-1-ss != p+np-1-sp) return false;
+                while(sp <= fp)
+                    if(*sp++ != *ss++) return false;
+            }
+        }
+        return false;
+    }
+    
 }

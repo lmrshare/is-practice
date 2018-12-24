@@ -1,5 +1,7 @@
 #include "graph_search.h"
 #include <stack>
+#include <queue>
+#include <map>
 namespace gs
 {
     int lc559::maxDepth(Node* root)
@@ -109,5 +111,85 @@ namespace gs
             }
         }
         return dl;
+    }
+    UndirectedGraphNode* lcc133::cloneGraph(UndirectedGraphNode *node)
+    {
+        if(nullptr == node) return node;
+        queue<UndirectedGraphNode*> q;//source queue
+        queue<UndirectedGraphNode*> q1;//track queue
+        q.push(node);
+        UndirectedGraphNode *res = nullptr;//same to parameter node[return value]
+        UndirectedGraphNode *c = nullptr;//the current point to process
+        UndirectedGraphNode *p = nullptr;//relative to c
+        map<int, UndirectedGraphNode*> exists;//set of created point[保证不重复create节点]
+        map<UndirectedGraphNode*, bool> process;//set of processed point[保证每个元素只处理一次]
+        while(!q.empty())
+        {
+            c = q.front();
+            q.pop();
+            if(nullptr == res)
+            {
+                exists[c->label] = new UndirectedGraphNode(c->label);
+                res = exists[c->label];
+                p = res;
+            }
+            else
+            {
+                p = q1.front();
+                q1.pop();
+            }
+            if(!process[c]) process[c] = true;
+            else continue;
+            for(auto son : c->neighbors)
+            {
+                q.push(son);
+                if(!exists[son->label]) exists[son->label] = new UndirectedGraphNode(son->label);
+                p->neighbors.push_back(exists[son->label]);
+                q1.push(exists[son->label]);
+            }
+        }
+        return res;
+    }
+    TreeNode* clonetree::cloneTree(TreeNode* root)
+    {
+        if(nullptr == root) return root;
+        queue<TreeNode*> q;
+        queue<TreeNode*> q1;
+        q.push(root);
+        TreeNode *res = nullptr;
+        TreeNode *p = nullptr;
+        while(!q.empty())
+        {
+            TreeNode* c = q.front();
+            q.pop();
+            if(nullptr == res)
+            {
+                res = new TreeNode(c->val);
+                p = res;
+            }
+            else
+            {
+                p = q1.front();
+                q1.pop();
+            }
+            if(nullptr != c->left)
+            {
+                q.push(c->left);
+                p->left = new TreeNode(c->left->val);
+                q1.push(p->left);
+            }
+            if(nullptr != c->right)
+            {
+                q.push(c->right);
+                p->right = new TreeNode(c->right->val);
+                q1.push(p->right);
+            }
+        }
+        return res;
+    }
+    int lcc329::longestIncreasingPath(vector<vector<int>>& matrix)
+    {
+        //TODO
+        return 0;
     }
 }

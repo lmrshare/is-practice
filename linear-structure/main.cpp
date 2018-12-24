@@ -7,6 +7,7 @@ void testlc763();
 //LinkedList
 void testlc876();
 void testlc817();
+void testlcc2();
 //Queue, Deque
 
 //Stack
@@ -15,7 +16,7 @@ void testlc921();
 
 int main()
 {
-    testlc921();
+    testlcc2();
     return 0;
 }
 void testlc344()
@@ -80,4 +81,24 @@ void testlc921()
     string S("()))((");
     int res = C->minAddToMakeValid(S);
     cout << "Output: " << res << endl;
+}
+void testlcc2()
+{
+    ls::lcc2 *C = new ls::lcc2();
+#if 0
+    ls::ListNode *l1 = new ls::ListNode(2);
+    ls::ListNode *node1 = new ls::ListNode(4);
+    ls::ListNode *node2 = new ls::ListNode(3);
+    l1->next = node1;
+    node1->next = node2;
+    ls::ListNode *l2 = new ls::ListNode(5);
+    ls::ListNode *node3 = new ls::ListNode(6);
+    ls::ListNode *node4 = new ls::ListNode(4);
+    l2->next = node3;
+    node3->next = node4;
+#elif 1
+    ls::ListNode *l1 = new ls::ListNode(5);
+    ls::ListNode *l2 = new ls::ListNode(5);
+#endif
+    ls::ListNode *res = C->addTwoNumbers(l1, l2);
 }

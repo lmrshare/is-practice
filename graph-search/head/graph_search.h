@@ -43,6 +43,12 @@ namespace gs
         int  next;
         State2(TreeNode *node_, int next_): node(node_), next(next_) {}
     };
+    struct UndirectedGraphNode 
+    {
+        int label;
+        vector<UndirectedGraphNode *> neighbors;
+        UndirectedGraphNode(int x) : label(x) {};
+    };
     //Depth First Search
     class lc559//Maximum Depth of N-ary Tree
     {
@@ -50,12 +56,28 @@ namespace gs
             int maxDepth(Node* root);//recursion dfs
             int maxDepth2(Node* root);//dfs, non-recursion(faster than recursion dfs)
     };
+    class lcc329 //矩阵中的最长递增路径, hard[dfs, 拓扑排序, 记忆化]
+    {
+        public:
+            int longestIncreasingPath(vector<vector<int>>& matrix);
+
+    };
     //Breadth Fitst Search
     class lc513 //Find Bottom Left Tree Value
     {
         public:
             int findBottomLeftValue(TreeNode* root);
             
+    };
+    class lcc133//克隆图
+    {
+        public:
+            UndirectedGraphNode* cloneGraph(UndirectedGraphNode *node);
+    };
+    class clonetree
+    {
+        public:
+            TreeNode* cloneTree(TreeNode* root);
     };
     //Dijkstra's algorithm(Best First Search)
     //Union Find

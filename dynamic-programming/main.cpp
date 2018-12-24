@@ -8,9 +8,11 @@ void test_lc338();
 void test_lc647();
 void test_lc120();
 void test_lc474();
+void test_lcc5();
+void test_lccxxx();
 int main()
 {
-    test_lc474();
+    test_lccxxx();
     return 0;
 }
 void test_lc121()
@@ -73,4 +75,43 @@ void test_lc474()
     dp::lc474 *C = new dp::lc474();
     int res = C->findMaxForm3(strs, m, n);
     cout << "Output: " << res << endl;
+}
+void test_lcc5()
+{
+    dp::lcc5 *C = new dp::lcc5();
+#if 1
+    string s("cbbd");
+#elif 0
+    string s("babad");
+#endif
+    string res = C->longestPalindrome3(s);
+    cout << "Output: " << res << endl;
+}
+void test_lccxxx()
+{
+#if 0
+    const char *s = "aa";
+    const char *p = "a";
+#elif 0
+    const char *s = "aa";
+    const char *p = "aa";
+#elif 0
+    const char *s = "aaa";
+    const char *p = "aa";
+#elif 0
+    const char *s = "aa";
+    const char *p = "a*";
+#elif 0
+    const char *s = "aa";
+    const char *p = ".*";
+#elif 0
+    const char *s = "ab";
+    const char *p = ".*";
+#elif 1
+    const char *s = "aab";
+    const char *p = "c*a*b";
+#endif
+    dp::lccxxx *C = new dp::lccxxx();
+    bool res = C->isMatch(s, p);
+    cout << "Output:" << res << endl;
 }
