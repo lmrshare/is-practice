@@ -75,5 +75,10 @@ namespace dp
       public:
           int rob(vector<int>& nums); 
     };
+    class lcc53
+    {
+      public:
+          int maxSubArray(vector<int>& nums); 
+    };
 }
 #endif

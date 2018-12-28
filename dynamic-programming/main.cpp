@@ -10,9 +10,10 @@ void test_lc120();
 void test_lc474();
 void test_lcc5();
 void test_lccxxx();
+void test_lcc53();
 int main()
 {
-    test_lccxxx();
+    test_lcc53();
     return 0;
 }
 void test_lc121()
@@ -114,4 +115,12 @@ void test_lccxxx()
     dp::lccxxx *C = new dp::lccxxx();
     bool res = C->isMatch(s, p);
     cout << "Output:" << res << endl;
+}
+void test_lcc53()
+{
+    vector<int>nums{-2,1,-3,4,-1,2,1,-5,4};
+    dp::lcc53 *C = new dp::lcc53();
+    int res = C->maxSubArray(nums);
+    cout << "Output: " << res << endl;
+    delete C;
 }

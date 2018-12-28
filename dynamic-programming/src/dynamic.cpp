@@ -406,5 +406,24 @@ namespace dp
         }
         return false;
     }
+    int lcc53::maxSubArray(vector<int>& nums)
+    {
+      size_t n = nums.size();
+      if(n < 0) return 0;
+      vector<int> s(n, 0);
+      vector<int> p(n, 0);
+      for(size_t i = 0; i < n; ++i)
+      {
+        if(0 == i)
+        {
+          s[i] = nums[i];
+          p[i] = nums[i];
+          continue;
+        }
+        s[i] = max(s[i-1]+nums[i], nums[i]);
+        p[i] = max(s[i], p[i-1]);
+      }
+      return p[n-1];
+    }
     
 }
