@@ -1,4 +1,5 @@
 #include "dynamic.h"
+#include <algorithm>
 
 namespace dp
 {
