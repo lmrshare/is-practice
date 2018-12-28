@@ -80,5 +80,10 @@ namespace dp
       public:
           int maxSubArray(vector<int>& nums); 
     };
+    class lcc62
+    {
+      public:
+          int uniquePaths(int m, int n);
+    };
 }
 #endif

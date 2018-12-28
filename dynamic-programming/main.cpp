@@ -11,9 +11,10 @@ void test_lc474();
 void test_lcc5();
 void test_lccxxx();
 void test_lcc53();
+void test_lcc62();
 int main()
 {
-    test_lcc53();
+    test_lcc62();
     return 0;
 }
 void test_lc121()
@@ -123,4 +124,12 @@ void test_lcc53()
     int res = C->maxSubArray(nums);
     cout << "Output: " << res << endl;
     delete C;
+}
+void test_lcc62()
+{
+  dp::lcc62 *C = new dp::lcc62();
+  int m = 3;
+  int n = 2;
+  int res = C->uniquePaths(m, n);
+  cout << "[62]Output: " << res << endl;
 }
