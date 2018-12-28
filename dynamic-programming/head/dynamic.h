@@ -85,5 +85,9 @@ namespace dp
       public:
           int uniquePaths(int m, int n);
     };
+    class lcc63{
+      public:
+          int uniquePathsWithObstacles(vector<vector<int> >& obstacleGrid);
+    };
 }
 #endif

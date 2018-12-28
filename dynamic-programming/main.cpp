@@ -12,9 +12,10 @@ void test_lcc5();
 void test_lccxxx();
 void test_lcc53();
 void test_lcc62();
+void test_lcc63();
 int main()
 {
-    test_lcc62();
+    test_lcc63();
     return 0;
 }
 void test_lc121()
@@ -132,4 +133,20 @@ void test_lcc62()
   int n = 2;
   int res = C->uniquePaths(m, n);
   cout << "[62]Output: " << res << endl;
+  delete C;
+}
+void test_lcc63()
+{
+  dp::lcc63 *C = new dp::lcc63();
+#if 0
+  vector<vector<int> >og{
+                          {0,0,0},
+                          {0,1,0},
+                          {0,0,0} 
+                        };
+#elif 1
+  vector<vector<int> >og{{0}};
+#endif
+  int num = C->uniquePathsWithObstacles(og);
+  cout << "[63]Output: " << num << endl;
 }

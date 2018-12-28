@@ -434,4 +434,47 @@ namespace dp
           dp[j] = dp[j] + dp[j-1];
       return dp[m-1];
     }
+    int lcc63::uniquePathsWithObstacles(vector<vector<int> >& obstacleGrid)
+    {
+      size_t m = obstacleGrid.size();
+      if(0 == m) return 0;
+      size_t n = obstacleGrid[0].size();
+      if(0 == n) return 0;
+      if(1 == obstacleGrid[0][0]) return 0;
+      vector<vector<int> >dp(m, vector<int>(n, 0));
+      for(size_t i = 0; i < n; ++i)
+      {
+        if(1 == obstacleGrid[0][i])
+        {
+          for(size_t j = i; j < n; ++j)
+            dp[0][j] = 0;
+          break;
+        }
+        else
+          dp[0][i] = 1;
+      }
+      for(size_t i = 0; i < m; ++i)
+      {
+        if(1 == obstacleGrid[i][0])
+        {
+          for(size_t j = i; j < m; ++j)
+            dp[j][0] = 0;
+          break;
+        }
+        else
+          dp[i][0] = 1;
+      }
+
+      for(size_t i = 1; i < m; ++i)
+      {
+        for(size_t j = 1; j < n; ++j)
+        {
+          if(1 == obstacleGrid[i][j])
+            dp[i][j] = 0;
+          else
+            dp[i][j] = dp[i-1][j]+dp[i][j-1];
+        }
+      }
+      return dp[m-1][n-1];
+    }
 }
