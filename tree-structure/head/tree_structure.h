@@ -10,6 +10,8 @@ using namespace std;
 
 namespace ts
 {
+    //tool function
+    void print_vector(vector<int>& nums);
     struct TreeNode 
     {
         int val;
@@ -37,7 +39,22 @@ namespace ts
         public:
             int peakIndexInMountainArray(vector<int>& A);
     };
-    //Binary tree
     //Binary Search tree
+    class lcc94
+    {
+        public:
+           vector<int> inorderTraversal(TreeNode* root);
+    };
+    class lcc144
+    {
+        public:
+           vector<int> preorderTraversal(TreeNode* root);
+    };
+    class lcc145
+    {
+        public:
+            vector<int> postorderTraversal(TreeNode* root);
+    };
+    //Binary tree
 }
 #endif

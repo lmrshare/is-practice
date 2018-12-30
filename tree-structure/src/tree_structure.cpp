@@ -1,4 +1,6 @@
 #include "tree_structure.h"
+#include <stack>
+#include <queue>
 
 namespace ts
 {
@@ -66,5 +68,92 @@ namespace ts
         }
         return i;
 #endif
+    }
+    vector<int> lcc94::inorderTraversal(TreeNode* root)
+    {
+      //1, 3, 2
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      stack<TreeNode*> q;
+      TreeNode *p = root;
+      while(!q.empty() || p)
+      {
+        if(p)//to the left-down corner
+        {
+          q.push(p);
+          p = p->left;
+        }
+        else
+        {
+          p = q.top();
+          q.pop();
+          res.push_back(p->val);
+          p = p->right;//进入右子树，开始新的一轮左子树遍历(这是递归的自我实现)
+        }
+      }
+      return res;
+    }
+
+    vector<int> lcc144::preorderTraversal(TreeNode* root)
+    {
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      stack<TreeNode*> q;
+      q.push(root);
+      TreeNode *node = nullptr;
+      while(!q.empty())
+      {
+        node = q.top();
+        q.pop();
+        res.push_back(node->val);
+        if(node->right)
+          q.push(node->right);
+        if(node->left)
+          q.push(node->left);
+      }
+      return res;
+    }
+    vector<int> lcc145::postorderTraversal(TreeNode* root)
+    {
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      stack<TreeNode*> q;
+      TreeNode *p = root;//current
+      TreeNode *visited = nullptr;
+      while(!q.empty() || p)
+      {
+        if(p)
+        {
+          q.push(p);
+          p = p->left;
+          continue;
+        }
+        p = q.top();
+        if(nullptr == p->right || p->right == visited)//leaf or right visited
+        {
+          res.push_back(p->val);
+          q.pop();
+          visited = p;
+          p = nullptr;
+        }
+        else
+          p = p->right;
+      }
+      return res;
+    }
+
+    void print_vector(vector<int>& nums)
+    {
+      cout << "[";
+      int i = 0;
+      int size = nums.size()-1;
+      for(auto & n : nums)
+      {
+        if(i++ < size)
+          cout << n << ", ";
+        else
+          cout << n;
+      }
+      cout << "]" << endl;
     }
 }
