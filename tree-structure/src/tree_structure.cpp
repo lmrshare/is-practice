@@ -75,7 +75,7 @@ namespace ts
       if(nullptr == root) return vector<int>(0, 0);
       vector<int> res(0, 0);
       stack<TreeNode*> q;
-      TreeNode *p = root;
+      TreeNode *p = root;//current point
       while(!q.empty() || p)
       {
         if(p)//to the left-down corner
@@ -119,7 +119,7 @@ namespace ts
       vector<int> res(0, 0);
       stack<TreeNode*> q;
       TreeNode *p = root;//current
-      TreeNode *visited = nullptr;
+      TreeNode *visited = nullptr;//p的子树的访问情况
       while(!q.empty() || p)
       {
         if(p)
@@ -134,10 +134,10 @@ namespace ts
           res.push_back(p->val);
           q.pop();
           visited = p;
-          p = nullptr;
+          p = nullptr;//ensure the queue pop next element
         }
         else
-          p = p->right;
+          p = p->right;//进入右子树，开始新的一轮左子树遍历(这是递归的自我实现)
       }
       return res;
     }
