@@ -20,6 +20,10 @@ namespace ts
       }
       cout << "]" << endl;
     }
+    void print_tree(TreeNode *root)
+    {
+      cout << "print the tree: " << root->val << endl;
+    }
     int lc687::longestUnivaluePath(TreeNode* root)
     {
         if(nullptr == root) return 0;
@@ -241,5 +245,92 @@ namespace ts
 
       }
       return res;
+    }
+    vector<TreeNode*> lcc95::generateTrees(int n)
+    {
+      if(n <= 0) return vector<TreeNode*>(0, nullptr);
+      vector<TreeNode*> res(0, nullptr);
+      for(int i=1; i<=n; ++i)
+      {
+        int num = res.size();
+        if(0 == num)
+        {
+          res.push_back(new TreeNode(i));
+          continue;
+        }
+        for(int j = 0; j < num; ++j)
+        {
+          TreeNode *tree = res[j];
+          stack<TreeNode*> r;//store all right son
+          TreeNode *p = tree;
+          while(p)//all right son
+          {
+            r.push(p);
+            p = p->right;
+          }
+          int num_copy = r.size();
+          vector<TreeNode*> trees(0, nullptr);
+          gen_trees(tree, num_copy, trees);
+          TreeNode *node = r.top();
+          node->right = new TreeNode(i);//original tree
+          int k = 0;
+          while(!r.empty())//update all new tree
+          {
+            r.pop();
+            TreeNode *tree_new = trees[k++];
+            if(0 == r.size())//it is root
+            {
+              TreeNode *node1 = new TreeNode(i);
+              node1->left = tree_new;
+              trees[k-1] = node1;
+            }
+            else
+            {
+              p = tree_new;
+              while(p->val != r.top()->val)
+                p = p->right;
+              TreeNode *oldr = p->right;
+              p->right = new TreeNode(i);
+              p->right->left = oldr;
+            }
+          }
+          //add new tree
+          for(auto nt : trees)
+            res.push_back(nt);
+        }
+      }
+      return res;
+    }
+    void lcc95::gen_trees(TreeNode *root, int num, vector<TreeNode*>& trees)
+    {
+      while(num-- > 0)
+      {
+        TreeNode *newroot = new TreeNode(root->val);
+        queue<TreeNode*> q, q2;
+        q.push(root);
+        q2.push(newroot);
+        TreeNode *p = nullptr;
+        TreeNode *p2 = nullptr;
+        while(!q.empty())
+        {
+          p = q.front();
+          q.pop();
+          p2 = q2.front();
+          q2.pop();
+          if(p->left)
+          {
+            q.push(p->left);
+            p2->left = new TreeNode(p->left->val);
+            q2.push(p2->left);
+          }
+          if(p->right)
+          {
+            q.push(p->right);
+            p2->right = new TreeNode(p->right->val);
+            q2.push(p2->right);
+          }
+        }
+        trees.push_back(newroot);
+      }
     }
 }

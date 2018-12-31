@@ -11,7 +11,9 @@ using namespace std;
 namespace ts
 {
     //tool function
+    struct TreeNode; 
     void print_vector(vector<int>& nums);
+    void print_tree(TreeNode *root);
     struct TreeNode 
     {
         int val;
@@ -55,6 +57,16 @@ namespace ts
         public:
             vector<int> postorderTraversal(TreeNode* root);
     };
+    //tree, dynamiprogramming
+    //12 ms, 在Unique Binary Search Trees II的C++提交中击败了99.47% 的用户5
+    class lcc95
+    {
+        public:
+            vector<TreeNode*> generateTrees(int n);
+        private:
+            void gen_trees(TreeNode *root, int num, vector<TreeNode*>& trees);
+    };
+    // not found in leetode until now.
     class left_view
     {
         public:

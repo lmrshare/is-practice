@@ -9,11 +9,12 @@ void testlc852();
 //Binary tree
 void testlcc94_lcc144_lcc145();
 void test_right_view();
+void test_lcc95();
 //Binary Search tree
 
 int main()
 {
-    test_right_view();
+    test_lcc95();
 }
 void testlc687()
 {
@@ -181,4 +182,14 @@ void test_right_view()
     cout << "[all leaf] Output:" << endl;
     ts::print_vector(res);
     delete C2;
+}
+void test_lcc95()
+{
+  ts::lcc95 *C = new ts::lcc95;
+  int n = 3;
+  vector<ts::TreeNode*> res = C->generateTrees(n);
+  cout <<"[95] Output:" << endl;
+  for(auto tree : res)
+    ts::print_tree(tree);
+  delete C;
 }
