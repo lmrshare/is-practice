@@ -333,4 +333,18 @@ namespace ts
         trees.push_back(newroot);
       }
     }
+    int lcc96::numTrees(int n)
+    {
+      if(n <= 0) return 0;
+      if(n == 1) return 1;
+      vector<int> dp(n+1, 0);
+      dp[0] = 1;
+      dp[1] = 1;
+      for(int i = 2; i <= n; ++i)
+      {
+        for(int j = i-1; j>=0; --j)
+          dp[i] += dp[j] * dp[i-1-j]; 
+      }
+      return dp[n];
+    }
 }

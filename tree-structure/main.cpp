@@ -10,11 +10,12 @@ void testlc852();
 void testlcc94_lcc144_lcc145();
 void test_right_view();
 void test_lcc95();
+void test_lcc96();
 //Binary Search tree
 
 int main()
 {
-    test_lcc95();
+    test_lcc96();
 }
 void testlc687()
 {
@@ -191,5 +192,20 @@ void test_lcc95()
   cout <<"[95] Output:" << endl;
   for(auto tree : res)
     ts::print_tree(tree);
+  delete C;
+}
+void test_lcc96()
+{
+  ts::lcc96 *C = new ts::lcc96;
+  int n;
+  cout <<"Input n:" << endl;
+  cin >> n;
+  while(n > 0)
+  {
+    int res = C->numTrees(n);
+    cout <<"[96] Output:" << res << endl;
+    cout <<"Input n:" << endl;
+    cin >> n;
+  }
   delete C;
 }

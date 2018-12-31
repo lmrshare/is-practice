@@ -58,13 +58,20 @@ namespace ts
             vector<int> postorderTraversal(TreeNode* root);
     };
     //tree, dynamiprogramming
-    //12 ms, 在Unique Binary Search Trees II的C++提交中击败了99.47% 的用户5
+    //执行用时: 12 ms, 在Unique Binary Search Trees II的C++提交中击败了99.47% 的用户
     class lcc95
     {
         public:
             vector<TreeNode*> generateTrees(int n);
         private:
             void gen_trees(TreeNode *root, int num, vector<TreeNode*>& trees);
+    };
+    //dynamic programming
+    //执行用时: 0 ms, 在Unique Binary Search Trees的C++提交中击败了100.00% 的用户
+    class lcc96
+    {
+        public:
+           int numTrees(int n);
     };
     // not found in leetode until now.
     class left_view
