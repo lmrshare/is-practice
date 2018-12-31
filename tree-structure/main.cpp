@@ -6,13 +6,14 @@
 void testlc687();
 //Binary search and Sorting
 void testlc852();
-void testlcc94_lcc144_lcc145();
 //Binary tree
+void testlcc94_lcc144_lcc145();
+void test_right_view();
 //Binary Search tree
 
 int main()
 {
-    testlcc94_lcc144_lcc145();
+    test_right_view();
 }
 void testlc687()
 {
@@ -133,4 +134,51 @@ void testlcc94_lcc144_lcc145()
     ts::print_vector(res);
     delete C2;
 
+}
+void test_right_view()
+{
+#if 0
+    ts::TreeNode *root = new ts::TreeNode(1);
+    ts::TreeNode *node1 = new ts::TreeNode(2);
+    ts::TreeNode *node2 = new ts::TreeNode(3);
+    root->right = node1;
+    node1->left = node2;
+#elif 1
+    ts::TreeNode *root = new ts::TreeNode(3);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    ts::TreeNode *node2 = new ts::TreeNode(2);
+    root->left = node1;
+    node1->right = node2;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(4);
+    ts::TreeNode *node1 = new ts::TreeNode(2);
+    ts::TreeNode *node2 = new ts::TreeNode(7);
+    root->left = node1;
+    root->right = node2;
+    ts::TreeNode *node3 = new ts::TreeNode(1);
+    ts::TreeNode *node4 = new ts::TreeNode(3);
+    node1->left = node3;
+    node1->right = node4;
+    ts::TreeNode *node5 = new ts::TreeNode(5);
+    ts::TreeNode *node6 = new ts::TreeNode(8);
+    node2->left = node5;
+    node2->right = node6;
+    ts::TreeNode *node7 = new ts::TreeNode(6);
+    node5->right = node7;
+#endif
+    ts::left_view *C = new ts::left_view;
+    vector<int> res = C->lv(root);
+    cout << "[left view] Output:" << endl;
+    ts::print_vector(res);
+    delete C;
+    ts::right_view *C1 = new ts::right_view;
+    res = C1->rv(root);
+    cout << "[right view] Output:" << endl;
+    ts::print_vector(res);
+    delete C1;
+    ts::all_leaf *C2 = new ts::all_leaf;
+    res = C2->al(root);
+    cout << "[all leaf] Output:" << endl;
+    ts::print_vector(res);
+    delete C2;
 }

@@ -1,9 +1,25 @@
 #include "tree_structure.h"
 #include <stack>
 #include <queue>
+#include <deque>
 
 namespace ts
 {
+    //tool functions
+    void print_vector(vector<int>& nums)
+    {
+      cout << "[";
+      int i = 0;
+      int size = nums.size()-1;
+      for(auto & n : nums)
+      {
+        if(i++ < size)
+          cout << n << ", ";
+        else
+          cout << n;
+      }
+      cout << "]" << endl;
+    }
     int lc687::longestUnivaluePath(TreeNode* root)
     {
         if(nullptr == root) return 0;
@@ -142,18 +158,88 @@ namespace ts
       return res;
     }
 
-    void print_vector(vector<int>& nums)
+    vector<int> left_view::lv(TreeNode *root)
     {
-      cout << "[";
-      int i = 0;
-      int size = nums.size()-1;
-      for(auto & n : nums)
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      queue<TreeNode*>e;e.push(root);
+      queue<queue<TreeNode*> >q;
+      q.push(e);
+      while(!q.empty())
       {
-        if(i++ < size)
-          cout << n << ", ";
-        else
-          cout << n;
+        queue<TreeNode*> layer = q.front();
+        q.pop();
+        //first element
+        TreeNode *node = layer.front();
+        res.push_back(node->val);
+        queue<TreeNode*> n_layer;
+        while(!layer.empty())
+        {
+          TreeNode *node = layer.front();
+          layer.pop();
+          if(node->left)
+            n_layer.push(node->left);
+          if(node->right)
+            n_layer.push(node->right);
+        }
+        if(!n_layer.empty())
+          q.push(n_layer);
       }
-      cout << "]" << endl;
+      return res;
+    }
+    vector<int> right_view::rv(TreeNode *root)
+    {
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      queue<TreeNode*>e;e.push(root);
+      queue<queue<TreeNode*> >q;
+      q.push(e);
+      while(!q.empty())
+      {
+        queue<TreeNode*> layer = q.front();
+        q.pop();
+        queue<TreeNode*> n_layer;
+        while(!layer.empty())
+        {
+          TreeNode *node = layer.front();
+          if(layer.size() == 1)
+            res.push_back(node->val);
+          layer.pop();
+          if(node->left)
+            n_layer.push(node->left);
+          if(node->right)
+            n_layer.push(node->right);
+        }
+        if(!n_layer.empty())
+          q.push(n_layer);
+      }
+      return res;
+    }       
+    vector<int> all_leaf::al(TreeNode *root)
+    {
+      if(nullptr == root) return vector<int>(0, 0);
+      vector<int> res(0, 0);
+      queue<TreeNode*> q;
+      q.push(root);
+        TreeNode *node;
+      while(!q.empty())
+      {
+        node = q.front();
+        q.pop();
+        bool leaf = false;
+        if(node->left)
+          q.push(node->left);
+        else
+          leaf = true;
+        if(node->right)
+        {
+          q.push(node->right);
+          leaf = false;
+        }
+        if(leaf)
+          res.push_back(node->val);
+
+      }
+      return res;
     }
 }

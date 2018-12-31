@@ -55,6 +55,21 @@ namespace ts
         public:
             vector<int> postorderTraversal(TreeNode* root);
     };
+    class left_view
+    {
+        public:
+            vector<int> lv(TreeNode *root);
+    };
+    class right_view
+    {
+        public:
+            vector<int> rv(TreeNode *root);
+    };
+    class all_leaf
+    {
+        public:
+            vector<int> al(TreeNode *root);
+    };
     //Binary tree
 }
 #endif
