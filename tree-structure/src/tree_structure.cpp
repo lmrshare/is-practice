@@ -347,4 +347,89 @@ namespace ts
       }
       return dp[n];
     }
+    bool lcc98::isValidBST(TreeNode* root)
+    {
+        if(nullptr == root) return true;
+        int VAL = INFINITY;
+        int maxV = -VAL;
+
+        stack<TreeNode*> q;
+        TreeNode *p = root;
+        TreeNode *visited = nullptr;
+        while(!q.empty() || p)
+        {
+            if(p)
+            {
+                q.push(p);
+                p = p->left;
+                continue;
+            }
+            p = q.top();
+            if(nullptr == p->right || visited == p->right)
+            {
+                if(-VAL == maxV)
+                    maxV = p->val;
+#if 0
+                else if(visited != p->right || nullptr == p->left && nullptr == p->right)
+                {
+                  //第一个条件代表只有一颗左子树
+                 //第二个条件代表叶子节点
+                 //不考虑(nullptr != visited  && visited == p->right)的情况, 因为这个case表明右子树已经访问完了, 这里不应该和p(即根)的值做判断(已经判断了)
+#elif 1
+                //这个判断条件实际上就是: !(nullptr != visited  && visited == p->right)
+                else if(nullptr == visited || visited != p->right)
+                {
+#endif
+                    if(p->val > maxV) maxV = p->val;
+                    else return false;
+                }
+                q.pop();
+                visited = p;
+                p = nullptr;
+            }
+            else
+            {
+                if(-VAL == maxV)
+                    maxV = p->val;
+                else
+                {
+                    if(p->val > maxV) maxV = p->val;
+                    else return false;
+                }
+                p = p->right;
+            }
+        }
+        return true;
+    }
+    bool lcc98::isValidBST2(TreeNode* root)
+    {
+        if(nullptr == root) return true;
+        int VAL = INFINITY;
+        int maxV = -VAL;
+
+        stack<TreeNode*> q;
+        TreeNode *p = root;
+        while(!q.empty() || p)
+        {
+            if(p)
+            {
+                q.push(p);
+                p = p->left;
+            }
+            else
+            {
+                p = q.top();
+                q.pop();
+                if(-VAL == maxV)
+                    maxV = p->val;
+                else
+                {
+                    if(p->val > maxV) maxV = p->val;
+                    else return false;
+                }
+                p = p->right;
+            }
+        }
+        return true;
+    }
 }

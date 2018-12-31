@@ -73,6 +73,14 @@ namespace ts
         public:
            int numTrees(int n);
     };
+    class lcc98
+    {
+        public:
+            //执行用时: 8 ms, 在Validate Binary Search Tree的C++提交中击败了97.83% 的用户
+            bool isValidBST(TreeNode* root);//后续遍历
+            //执行用时: 8 ms, 在Validate Binary Search Tree的C++提交中击败了97.83% 的用户
+            bool isValidBST2(TreeNode* root);//中序遍历
+    };
     // not found in leetode until now.
     class left_view
     {

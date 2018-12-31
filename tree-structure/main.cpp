@@ -11,11 +11,12 @@ void testlcc94_lcc144_lcc145();
 void test_right_view();
 void test_lcc95();
 void test_lcc96();
+void test_lcc98();
 //Binary Search tree
 
 int main()
 {
-    test_lcc96();
+    test_lcc98();
 }
 void testlc687()
 {
@@ -208,4 +209,60 @@ void test_lcc96()
     cin >> n;
   }
   delete C;
+}
+void test_lcc98()
+{
+
+#if 0
+    ts::TreeNode *root = new ts::TreeNode(1);
+    ts::TreeNode *node1 = new ts::TreeNode(2);
+    ts::TreeNode *node2 = new ts::TreeNode(3);
+    root->right = node1;
+    node1->left = node2;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(3);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    ts::TreeNode *node2 = new ts::TreeNode(2);
+    root->left = node1;
+    node1->right = node2;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(4);
+    ts::TreeNode *node1 = new ts::TreeNode(2);
+    ts::TreeNode *node2 = new ts::TreeNode(7);
+    root->left = node1;
+    root->right = node2;
+    ts::TreeNode *node3 = new ts::TreeNode(1);
+    ts::TreeNode *node4 = new ts::TreeNode(3);
+    node1->left = node3;
+    node1->right = node4;
+    ts::TreeNode *node5 = new ts::TreeNode(5);
+    ts::TreeNode *node6 = new ts::TreeNode(8);
+    node2->left = node5;
+    node2->right = node6;
+    ts::TreeNode *node7 = new ts::TreeNode(6);
+    node5->right = node7;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(1);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    root->left = node1;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(2);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    ts::TreeNode *node2 = new ts::TreeNode(3);
+    root->left = node1;
+    root->right = node2;
+#elif 0
+    ts::TreeNode *root = new ts::TreeNode(0);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    root->right = node1;
+#elif 1
+    ts::TreeNode *root = new ts::TreeNode(1);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    root->left = node1;
+#endif
+    using namespace ts;
+    lcc98 *C = new lcc98;
+    bool res = C->isValidBST2(root);
+    cout << "[98] Output: " << boolalpha << res << endl;
+    delete C;
 }
