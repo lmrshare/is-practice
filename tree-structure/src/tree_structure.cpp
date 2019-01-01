@@ -432,4 +432,35 @@ namespace ts
         }
         return true;
     }
+    void lcc99::recoverTree(TreeNode* root)
+    {
+      if(nullptr == root) return;
+      stack<TreeNode*> q;
+      TreeNode *p = root;
+      TreeNode *pre = nullptr;
+      TreeNode *a = nullptr;
+      TreeNode *b = nullptr;
+      while(!q.empty() || p)
+      {
+        if(p)
+        {
+          q.push(p);
+          p = p->left;
+        }
+        else
+        {
+          p = q.top();
+          q.pop();
+          if(pre && pre->val > p->val)
+          {
+            if(!a) a = pre;
+            b = p;
+          }
+          pre = p;
+          p = p->right;
+        }
+      }
+      if(a && b)
+        swap(a->val, b->val);
+    }
 }

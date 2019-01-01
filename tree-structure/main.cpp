@@ -12,11 +12,12 @@ void test_right_view();
 void test_lcc95();
 void test_lcc96();
 void test_lcc98();
+void test_lcc99();
 //Binary Search tree
 
 int main()
 {
-    test_lcc98();
+    test_lcc99();
 }
 void testlc687()
 {
@@ -265,4 +266,26 @@ void test_lcc98()
     bool res = C->isValidBST2(root);
     cout << "[98] Output: " << boolalpha << res << endl;
     delete C;
+}
+void test_lcc99()
+{
+  using namespace ts;
+#if 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(3);
+  TreeNode *node2= new TreeNode(2);
+  root->left = node1;
+  node1->right = node2;
+#elif 1
+  TreeNode *root = new TreeNode(3);
+  TreeNode *node1 = new TreeNode(1);
+  TreeNode *node2= new TreeNode(4);
+  TreeNode *node3= new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  node2->left = node3;
+#endif
+  lcc99 *C = new lcc99;
+  C->recoverTree(root);
+  cout << "[99] result" << endl;
 }

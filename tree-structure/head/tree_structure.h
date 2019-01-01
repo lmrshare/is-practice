@@ -81,6 +81,13 @@ namespace ts
             //执行用时: 8 ms, 在Validate Binary Search Tree的C++提交中击败了97.83% 的用户
             bool isValidBST2(TreeNode* root);//中序遍历
     };
+    //执行用时: 52 ms, 在Recover Binary Search Tree的C++提交中击败了61.37% 的用户
+    //utilizing inorder
+    class lcc99
+    {
+        public:
+           void recoverTree(TreeNode* root);
+    };
     // not found in leetode until now.
     class left_view
     {
