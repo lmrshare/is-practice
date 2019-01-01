@@ -88,6 +88,26 @@ namespace ts
         public:
            void recoverTree(TreeNode* root);
     };
+    //执行用时: 4 ms, 在Symmetric Tree的C++提交中击败了99.97% 的用户
+    class lcc101
+    {
+        public:
+           bool isSymmetric(TreeNode* root);
+    };
+    //执行用时: 4 ms, 在Binary Tree Level Order Traversal的C++提交中击败了99.97% 的用户
+    class lcc102
+    {
+        public:
+           vector<vector<int> > levelOrder(TreeNode* root);
+    };
+    //执行用时: 8 ms, 在Binary Tree Zigzag Level Order Traversal的C++提交中击败了23.81% 的用户
+    //or
+    //执行用时: 4 ms, 在Binary Tree Zigzag Level Order Traversal的C++提交中击败了98.91% 的用户
+    class lcc103
+    {
+        public:
+           vector<vector<int> > zigzagLevelOrder(TreeNode* root);
+    };
     // not found in leetode until now.
     class left_view
     {

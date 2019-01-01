@@ -13,11 +13,14 @@ void test_lcc95();
 void test_lcc96();
 void test_lcc98();
 void test_lcc99();
+void test_lcc101();
+void test_lcc102();
+void test_lcc103();
 //Binary Search tree
 
 int main()
 {
-    test_lcc99();
+    test_lcc103();
 }
 void testlc687()
 {
@@ -288,4 +291,104 @@ void test_lcc99()
   lcc99 *C = new lcc99;
   C->recoverTree(root);
   cout << "[99] result" << endl;
+  delete C;
+}
+void test_lcc101()
+{
+  using namespace ts;
+#if 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(4);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(4);
+  TreeNode *node6 = new TreeNode(3);
+  node2->left = node5;
+  node2->right = node6;
+#elif 1
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(3);
+  node1->right = node3;
+  node2->right = node4;
+#endif
+  lcc101 *C = new lcc101;
+  bool res = C->isSymmetric(root);
+  cout << "[101] Output:" << boolalpha << res <<endl;
+  delete C;
+}
+void test_lcc102()
+{
+  using namespace ts;
+#if 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(4);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(4);
+  TreeNode *node6 = new TreeNode(3);
+  node2->left = node5;
+  node2->right = node6;
+#elif 1
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(3);
+  node1->right = node3;
+  node2->right = node4;
+#endif
+  lcc102 *C = new lcc102;
+  vector<vector<int> > res = C->levelOrder(root);
+  cout << "[102] Ouput:" << endl;
+  delete C;
+}
+void test_lcc103()
+{
+  using namespace ts;
+#if 1
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(3);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(4);
+  TreeNode *node4 = new TreeNode(5);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(6);
+  TreeNode *node6 = new TreeNode(7);
+  node2->left = node5;
+  node2->right = node6;
+#elif 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(3);
+  node1->right = node3;
+  node2->right = node4;
+#endif
+  lcc103 *C = new lcc103;
+  vector<vector<int> > res = C->zigzagLevelOrder(root);
+  cout << "[103] Ouput:" << endl;
+  delete C;
 }
