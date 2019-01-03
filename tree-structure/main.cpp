@@ -12,11 +12,13 @@ void test_right_view();
 void test_lcc95();
 void test_lcc96();
 void test_lcc98();
+void test_lcc104();
+void test_lcc105();
 //Binary Search tree
 
 int main()
 {
-    test_lcc98();
+    test_lcc105();
 }
 void testlc687()
 {
@@ -264,5 +266,36 @@ void test_lcc98()
     lcc98 *C = new lcc98;
     bool res = C->isValidBST2(root);
     cout << "[98] Output: " << boolalpha << res << endl;
+    delete C;
+}
+void test_lcc104()
+{
+#if 0
+    ts::TreeNode *root = new ts::TreeNode(1);
+    ts::TreeNode *node1 = new ts::TreeNode(2);
+    ts::TreeNode *node2 = new ts::TreeNode(3);
+    root->right = node1;
+    node1->left = node2;
+#elif 1
+    ts::TreeNode *root = new ts::TreeNode(3);
+    ts::TreeNode *node1 = new ts::TreeNode(1);
+    ts::TreeNode *node2 = new ts::TreeNode(2);
+    root->left = node1;
+    node1->right = node2;
+#endif
+    using namespace ts;
+    lcc104 *C = new lcc104;
+    int res = C->maxDepth(root);
+    cout << "[104] Output: " << res << endl;
+    delete C;
+}
+void test_lcc105()
+{
+    using namespace ts;
+    vector<int>preorder{3,9,20,15,7};
+    vector<int>inorder{9,3,15,20,7};
+    lcc105 *C = new lcc105;
+    TreeNode * res = C->buildTree(preorder, inorder);
+    cout << "[105]" << endl;
     delete C;
 }

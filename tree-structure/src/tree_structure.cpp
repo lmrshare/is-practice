@@ -432,4 +432,104 @@ namespace ts
         }
         return true;
     }
+    int lcc104::maxDepth(TreeNode* root)
+    {
+        if(nullptr == root) return 0;
+        queue<TreeNode*> e;e.push(root);
+        queue<queue<TreeNode*> >q;q.push(e);
+        int res = 1;
+        while(!q.empty())
+        {
+            queue<TreeNode*> layer = q.front();
+            q.pop();
+            queue<TreeNode*> nl;
+            while(!layer.empty())
+            {
+                TreeNode *node = layer.front();
+                layer.pop();
+                if(nullptr != node->left)
+                    nl.push(node->left);
+                if(nullptr != node->right)
+                    nl.push(node->right);
+            }
+            if(nl.size() > 0)
+            {
+                q.push(nl);
+                ++res;
+            }
+        }
+        return res;
+    }
+    TreeNode* lcc105::buildTree(vector<int>& preorder, vector<int>& inorder)
+    {
+#if 0
+        if(preorder.size() != inorder.size() || preorder.size() == 0) return nullptr;
+        map<int, int> mpp, mpi;
+        for(size_t i = 0; i < preorder.size();++i)
+        {
+            mpp[preorder[i]] = i;
+            mpi[inorder[i]] = i;
+        }
+        TreeNode *root = nullptr;
+        int s = 0, f = preorder.size() - 1;
+        for(auto r : preorder)
+        {
+            TreeNode *node = new TreeNode(r);
+            if(mpp[r] == 0) root = node;
+            int llen = mpi[r] - s;
+            int rlen = f - mpi[r];
+            if(llen > 0)
+                node->left = new TreeNode(preorder[mpp[r]+1]);
+            if(rlen > 0)
+                node->right = new TreeNode(preorder[mpp[r]+llen+1]);
+        }
+
+#elif 1
+        if(preorder.size() != inorder.size() || preorder.size() == 0) return nullptr;
+        map<int, int> mpp, mpi;
+        for(size_t i = 0; i < preorder.size();++i)
+        {
+            mpp[preorder[i]] = i;
+            mpi[inorder[i]] = i;
+        }
+        return buildTree(preorder.begin(),
+                         preorder.end(),
+                         inorder.begin(),
+                         inorder.end(),
+                         mpp,
+                         mpi,
+                         preorder,
+                         inorder
+                        );
+#endif
+    }
+            TreeNode* lcc105::buildTree(vector<int>::iterator preb,
+                                        vector<int>::iterator pref,
+                                        vector<int>::iterator inb,
+                                        vector<int>::iterator inf,
+                                        map<int, int>& mpp,
+                                        map<int, int>& mpi,
+                                        vector<int>& preorder,
+                                        vector<int>& inorder
+                                        )
+            {
+                size_t num = pref - preb;
+                if(0 == num) return nullptr;
+                TreeNode *root = new TreeNode(*preb);
+                if(1 == num) return root; 
+                int llen = mpi[root->val] - (inb - inorder.begin());//index of root in inorder  -  
+                int rlen = inf - inorder.begin()-1-mpi[root->val];
+                if(llen > 0)
+                {
+                    TreeNode *lr = buildTree(preb+1, preb+llen+1, inb, inb+llen,mpp, mpi,preorder, inorder);
+                    root->left = lr;
+                }
+                if(rlen > 0)
+                {
+                    TreeNode *rr = buildTree(preb+llen+1, pref, inb+llen+1, inf, mpp, mpi, preorder, inorder);
+                    root->right = rr;
+                }
+                return root;
+            }
+
 }

@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <list>
 #include <random>
+#include <map>
 using namespace std;
 
 namespace ts
@@ -80,6 +81,28 @@ namespace ts
             bool isValidBST(TreeNode* root);//后续遍历
             //执行用时: 8 ms, 在Validate Binary Search Tree的C++提交中击败了97.83% 的用户
             bool isValidBST2(TreeNode* root);//中序遍历
+    };
+    //执行用时: 8 ms, 在Validate Binary Search Tree的C++提交中击败了38.83% 的用户
+    class lcc104
+    {
+        public:
+            int maxDepth(TreeNode* root);
+    };
+    class lcc105
+    {
+        public:
+            //执行用时: 12 ms, 在Construct Binary Tree from Preorder and Inorder Traversal的C++提交中击败了97.57% 的用户
+            TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
+        private:
+            TreeNode* buildTree(vector<int>::iterator preb,
+                                vector<int>::iterator pref,
+                                vector<int>::iterator inb,
+                                vector<int>::iterator inf,
+                                map<int, int>& mpp,
+                                map<int, int>& mpi,
+                                vector<int>& preorder,
+                                vector<int>& inorder
+                                );
     };
     // not found in leetode until now.
     class left_view
