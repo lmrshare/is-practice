@@ -532,4 +532,157 @@ namespace ts
                 return root;
             }
 
+    void lcc99::recoverTree(TreeNode* root)
+    {
+      if(nullptr == root) return;
+      stack<TreeNode*> q;
+      TreeNode *p = root;
+      TreeNode *pre = nullptr;
+      TreeNode *a = nullptr;
+      TreeNode *b = nullptr;
+      while(!q.empty() || p)
+      {
+        if(p)
+        {
+          q.push(p);
+          p = p->left;
+        }
+        else
+        {
+          p = q.top();
+          q.pop();
+          if(pre && pre->val > p->val)
+          {
+            if(!a) a = pre;
+            b = p;
+          }
+          pre = p;
+          p = p->right;
+        }
+      }
+      if(a && b)
+        swap(a->val, b->val);
+    }
+    bool lcc101::isSymmetric(TreeNode* root)
+    {
+#if 0
+      //this answer is error
+      if(nullptr == root) return true;
+      stack<TreeNode*> q;
+      TreeNode *p = root;
+      vector<int> res;
+      while(!q.empty() || p)
+      {
+        if(p)
+        {
+          q.push(p);
+          p = p->left;
+        }
+        else
+        {
+          p = q.top();
+          q.pop();
+          res.push_back(p->val);
+          p = p->right;
+        }
+      }
+      size_t num = res.size();
+      if(0 == num % 2) return false;
+      for(size_t i = 0; i < num; ++i)
+      {
+        if(res[i] != res[num-1-i])
+          return false;
+      }
+      return true;
+#elif 1
+      if(nullptr == root) return true;
+      queue<TreeNode*>q;
+      q.push(root);
+      q.push(root);
+      while(!q.empty())
+      {
+        TreeNode *t1 = q.front();
+        q.pop();
+        TreeNode *t2 = q.front();
+        q.pop();
+        if(nullptr == t1 && nullptr == t2) continue;
+        if(nullptr == t1 || nullptr == t2) return false;
+        if(t1->val != t2->val) return false;
+        q.push(t1->left);
+        q.push(t2->right);
+        q.push(t1->right);
+        q.push(t2->left);
+      }
+      return true;
+#endif
+    }
+    vector<vector<int> > lcc102::levelOrder(TreeNode* root)
+    {
+      vector<vector<int> > res(0, vector<int>(0, 0));
+      if(nullptr == root)
+        return res;
+      queue<TreeNode*>e;e.push(root);
+      queue<queue<TreeNode*> >q;
+      q.push(e);
+      TreeNode *node = nullptr;
+      while(!q.empty())
+      {
+        queue<TreeNode*> layer = q.front();
+        q.pop();
+        vector<int> vl(0, 0);
+        queue<TreeNode*> nl;
+        while(!layer.empty())
+        {
+          node = layer.front();
+          layer.pop();
+          vl.push_back(node->val);
+          if(node->left)
+            nl.push(node->left);
+          if(node->right)
+            nl.push(node->right);
+        }
+        if(nl.size() > 0)
+          q.push(nl);
+        if(vl.size() > 0)
+          res.push_back(vl);
+      }
+      return res;
+    }
+    vector<vector<int> > lcc103::zigzagLevelOrder(TreeNode* root)
+    {
+      vector<vector<int> >res(0, vector<int>(0, 0));
+      if(nullptr == root) return res;
+      queue<TreeNode*> e;e.push(root);
+      queue<queue<TreeNode*> >q;
+      q.push(e);
+      bool flag = true;
+      TreeNode *node = nullptr;
+      while(!q.empty())
+      {
+        queue<TreeNode*> layer = q.front();
+        q.pop();
+        queue<TreeNode*> nl;
+        vector<int> vl(0, 0);
+        while(!layer.empty())
+        {
+          node = layer.front();
+          layer.pop();
+          if(flag)
+            vl.push_back(node->val);
+          else
+            vl.insert(vl.begin(), node->val);
+          if(node->left)
+            nl.push(node->left);
+          if(node->right)
+            nl.push(node->right);
+        }
+        if(flag) flag = false;
+        else flag = true;
+        if(nl.size() > 0)
+          q.push(nl);
+        if(vl.size() > 0)
+          res.push_back(vl);
+      }
+      return res;
+    }
 }
