@@ -44,10 +44,10 @@ namespace bo
     }
     void lcc169::quicksort(vector<int>& nums, int p, int r)
     {
-        if(p == r) return;
-        if(p+1 == r)
+        if(p == r) return;//one element
+        if(p+1 == r)//two elements
         {
-            if(nums[p] > nums[r])
+            if(nums[p] > nums[r])//exchange
             {
                 int tmp = nums[p];
                 nums[p] = nums[r];
