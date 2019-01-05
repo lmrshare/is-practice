@@ -138,6 +138,14 @@ namespace ts
         public:
            vector<vector<int> > levelOrderBottom(TreeNode* root);
     };
+    //执行用时: 12 ms, 在Convert Sorted Array to Binary Search Tree的C++提交中击败了98.31% 的用户
+    class lcc108
+    {
+        public:
+           TreeNode* sortedArrayToBST(vector<int>& nums);
+        private:
+           TreeNode* sortedArrayToBST(vector<int>& nums, int start, int finish);
+    };
     // not found in leetode until now.
     class left_view
     {

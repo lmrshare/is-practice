@@ -19,11 +19,12 @@ void test_lcc101();
 void test_lcc102();
 void test_lcc103();
 void test_lcc107();
+void test_lcc108();
 //Binary Search tree
 
 int main()
 {
-    test_lcc107();
+    test_lcc108();
 }
 void testlc687()
 {
@@ -459,4 +460,21 @@ void test_lcc107()
   vector<vector<int> > res = C->levelOrderBottom(root);
   cout << "[107] Output:" << endl;
   print_matrix(res);
+}
+void test_lcc108()
+{
+  using namespace ts;
+#if 0
+  vector<int> nums{-10,-3,0,5,9};
+#elif 1
+  vector<int> nums(0, 0);
+#endif
+  lcc108 *C = new lcc108;
+  TreeNode *root = C->sortedArrayToBST(nums);
+  delete C;
+  //print values of tree
+  lcc102 *C1 = new lcc102;
+  vector<vector<int> > vals = C1->levelOrder(root);
+  cout << "[108] Output:" << endl;
+  print_matrix(vals);
 }

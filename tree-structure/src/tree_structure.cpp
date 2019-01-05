@@ -720,4 +720,27 @@ namespace ts
       }
       return res;
     }
-}
+    TreeNode* lcc108::sortedArrayToBST(vector<int>& nums)
+    {
+      return sortedArrayToBST(nums, 0, nums.size()-1);
+    }
+    TreeNode* lcc108::sortedArrayToBST(vector<int>& nums, int start, int finish)
+    {
+      if(finish < 0) return nullptr;
+      if(start == finish) return new TreeNode(nums[start]);
+      if(start + 1 == finish)
+      {
+        TreeNode *root = new TreeNode(nums[start]);
+        root->right = new TreeNode(nums[finish]);
+        return root;
+      }
+      //number of nums is at least 3.
+      int mid = (start + finish)/2;
+      TreeNode *root = new TreeNode(nums[mid]);
+      TreeNode *left = sortedArrayToBST(nums, start, mid-1);
+      TreeNode *right = sortedArrayToBST(nums, mid+1, finish);
+      root->left = left;
+      root->right = right;
+      return root;
+    }
+   }
