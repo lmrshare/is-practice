@@ -38,9 +38,14 @@ void testlcc169()
 {
 #if 0
     vector<int>nums{2, 1, 2, 3, 2};
-#elif 1
+#elif 0
     vector<int>nums{2, 1, 2, 2};
+#elif 0//this is for quicksort
+    vector<int>nums{7, 6, 5, 4, 4, 3, 2, 1};
+#elif 1//this is for quicksort
+   vector<int>nums{7, 6, 6, 5, 4, 4, 3, 2, 1};
 #endif
+
     bo::lcc169 *C = new bo::lcc169();
     int res = C->majorityElement2(nums);
     cout << "Output: " << res << endl;

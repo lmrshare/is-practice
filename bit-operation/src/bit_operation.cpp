@@ -39,7 +39,11 @@ namespace bo
     }
     int lcc169::majorityElement2(vector<int>& nums)
     {
+#if 0//recursion quicksort
         quicksort(nums, 0, nums.size()-1);
+#elif 1//non-recursion quicksort
+        quicksort(nums);
+#endif
         return nums[nums.size()/2];
     }
     void lcc169::quicksort(vector<int>& nums, int p, int r)
@@ -98,8 +102,24 @@ namespace bo
         nums[r] = tmp;
         return i;
     }
+    int lcc169::partion2(vector<int>& nums, int start, int end)
+    {
+        int pivot = nums[end];
+        int pIndex = start;
+        for (int i = start; i < end; i++)
+        {
+            if (nums[i] <= pivot) swap(nums[i], nums[pIndex++]);
+        }
+        swap(nums[pIndex], nums[end]);
+        return pIndex;
+    }
     void lcc169::quicksort(vector<int>& nums)
     {
-        //TODO
+        if(1 >= nums.size()) return;
+        int start = 0;
+        int end = nums.size()-1;
+        int pIndex = start;
+        while(pIndex < end)
+            pIndex = partion2(nums, start, pIndex + 1);
     }
 }

@@ -29,6 +29,7 @@ namespace bo
           void quicksort(vector<int>& nums, int p, int r);//Recursion version
           void quicksort(vector<int>& nums);//Non-recursion version
           int partion(vector<int>& nums, int p, int r);
+          int partion2(vector<int>& nums, int start, int end);//for non-recursion version
   };
 }
 #endif
