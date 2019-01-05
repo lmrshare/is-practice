@@ -18,11 +18,12 @@ void test_lcc99();
 void test_lcc101();
 void test_lcc102();
 void test_lcc103();
+void test_lcc107();
 //Binary Search tree
 
 int main()
 {
-    test_lcc105();
+    test_lcc107();
 }
 void testlc687()
 {
@@ -424,4 +425,38 @@ void test_lcc103()
   vector<vector<int> > res = C->zigzagLevelOrder(root);
   cout << "[103] Ouput:" << endl;
   delete C;
+}
+void test_lcc107()
+{
+  using namespace ts;
+#if 1
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(3);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(4);
+  TreeNode *node4 = new TreeNode(5);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(6);
+  TreeNode *node6 = new TreeNode(7);
+  node2->left = node5;
+  node2->right = node6;
+#elif 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(3);
+  node1->right = node3;
+  node2->right = node4;
+#endif
+
+  lcc107 *C = new lcc107;
+  vector<vector<int> > res = C->levelOrderBottom(root);
+  cout << "[107] Output:" << endl;
+  print_matrix(res);
 }

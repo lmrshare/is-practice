@@ -14,6 +14,7 @@ namespace ts
     //tool function
     struct TreeNode; 
     void print_vector(vector<int>& nums);
+    void print_matrix(vector<vector<int> >& nums);
     void print_tree(TreeNode *root);
     struct TreeNode 
     {
@@ -130,6 +131,12 @@ namespace ts
     {
         public:
            vector<vector<int> > zigzagLevelOrder(TreeNode* root);
+    };
+    //执行用时: 8 ms, 在Binary Tree Level Order Traversal II的C++提交中击败了33.37% 的用户
+    class lcc107
+    {
+        public:
+           vector<vector<int> > levelOrderBottom(TreeNode* root);
     };
     // not found in leetode until now.
     class left_view

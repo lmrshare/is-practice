@@ -20,6 +20,11 @@ namespace ts
       }
       cout << "]" << endl;
     }
+    void print_matrix(vector<vector<int> >& nums)
+    {
+      for(auto v : nums)
+        print_vector(v);
+    }
     void print_tree(TreeNode *root)
     {
       cout << "print the tree: " << root->val << endl;
@@ -682,6 +687,36 @@ namespace ts
           q.push(nl);
         if(vl.size() > 0)
           res.push_back(vl);
+      }
+      return res;
+    }
+    vector<vector<int> > lcc107::levelOrderBottom(TreeNode* root)
+    {
+      vector<vector<int> > res(0, vector<int>(0, 0));
+      if(nullptr == root) return res;
+      queue<TreeNode*>e;e.push(root);
+      queue<queue<TreeNode*> >q;q.push(e);
+      queue<TreeNode*> layer;
+      while(!q.empty())
+      {
+        layer = q.front();
+        q.pop();
+        queue<TreeNode*> nl;
+        vector<int> val_l;
+        while(!layer.empty())
+        {
+          TreeNode *node = layer.front();
+          layer.pop();
+          val_l.push_back(node->val);
+          if(nullptr != node->left)
+            nl.push(node->left);
+          if(nullptr != node->right)
+            nl.push(node->right);
+        }
+        if(val_l.size()!=0)
+          res.insert(res.begin(), val_l);
+        if(nl.size() != 0)
+          q.push(nl);
       }
       return res;
     }
