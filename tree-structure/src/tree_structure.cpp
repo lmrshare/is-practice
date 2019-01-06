@@ -774,4 +774,35 @@ namespace ts
       if(l && r && abs(lheight-rheight) <=1 )return true;
       return false;
     }
+    int lcc111::minDepth(TreeNode* root)
+    {
+      if(nullptr == root) return 0;
+      queue<TreeNode*>e;e.push(root);
+      queue<queue<TreeNode*> >q;q.push(e);
+      int res = INFINITY; 
+      queue<TreeNode*> layer;
+      int numlayer = 0;
+      while(!q.empty())
+      {
+        layer = q.front();
+        numlayer++;
+        q.pop();
+        queue<TreeNode*> nl;
+        while(!layer.empty())
+        {
+          TreeNode *node = layer.front();
+          layer.pop();
+          if(node->left)
+            nl.push(node->left);
+          if(node->right)
+            nl.push(node->right);
+          if(nullptr == node->left &&
+             nullptr == node->right&&
+             numlayer < res)
+            res = numlayer;
+        }
+        if(nl.size() > 0) q.push(nl);
+      }
+      return res;
+    }
    }

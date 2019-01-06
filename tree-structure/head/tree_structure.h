@@ -154,6 +154,12 @@ namespace ts
         private:
            bool isBalanced(TreeNode* root, int& depth);
     };
+    //执行用时: 8 ms, 在Minimum Depth of Binary Tree的C++提交中击败了68.34% 的用户
+    class lcc111
+    {
+        public:
+           int minDepth(TreeNode* root);
+    };
     // not found in leetode until now.
     class left_view
     {
