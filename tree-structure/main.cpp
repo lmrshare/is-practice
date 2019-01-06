@@ -22,11 +22,12 @@ void test_lcc107();
 void test_lcc108();
 void test_lcc110();
 void test_lcc111();
+void test_lcc112();
 //Binary Search tree
 
 int main()
 {
-    test_lcc111();
+    test_lcc112();
 }
 void testlc687()
 {
@@ -551,4 +552,28 @@ void test_lcc111()
   int res = C->minDepth(root);
   cout << "[111] Output: " << res << endl;
 
+}
+void test_lcc112()
+{
+  using namespace ts;
+  TreeNode *root = new TreeNode(5);
+  TreeNode *node1 = new TreeNode(4);
+  TreeNode *node2 = new TreeNode(8);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(11);
+  node1->left = node3;
+  TreeNode *node4 = new TreeNode(13);
+  TreeNode *node5 = new TreeNode(4);
+  node2->left = node4;
+  node2->right = node5;
+  TreeNode *node6 = new TreeNode(7);
+  TreeNode *node7 = new TreeNode(2);
+  node3->left = node6;
+  node3->right = node7;
+  TreeNode *node8 = new TreeNode(1);
+  node5->right = node8;
+  lcc112 *C = new lcc112;
+  bool res = C->hasPathSum(root, 22);
+  cout << "[112] Output: " << boolalpha << res << endl;
 }

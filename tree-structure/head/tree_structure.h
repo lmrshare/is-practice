@@ -160,6 +160,11 @@ namespace ts
         public:
            int minDepth(TreeNode* root);
     };
+    class lcc112
+    {
+        public:
+           bool hasPathSum(TreeNode* root, int sum);
+    };
     // not found in leetode until now.
     class left_view
     {

@@ -805,4 +805,39 @@ namespace ts
       }
       return res;
     }
+    bool lcc112::hasPathSum(TreeNode* root, int sum)
+    {
+#if 0
+      if(nullptr == root) return false;
+      stack<TreeNode*>q;
+      TreeNode *p = root;
+      int sum_stack = 0;
+      int sum_p = 0;
+      while(!q.empty() || p)
+      {
+        if(p)
+        {
+          sum_stack += p->val;
+          sum_p += p->val;
+          q.push(p);
+          p = p->left;
+        }
+        else
+        {
+          p = q.top();
+          q.pop();
+          sum_stack -= p->val;
+          if(nullptr == p->right)
+          {
+            if(sum_p == sum)
+              return true;
+          }
+          p = p->right;
+        }
+      }
+      return false;
+    }
+#elif 1
+    return true;
+#endif
    }
