@@ -146,6 +146,14 @@ namespace ts
         private:
            TreeNode* sortedArrayToBST(vector<int>& nums, int start, int finish);
     };
+    class lcc110
+    {
+        public:
+          //执行用时: 8 ms, 在Balanced Binary Tree的C++提交中击败了98.26% 的用户
+           bool isBalanced(TreeNode* root);
+        private:
+           bool isBalanced(TreeNode* root, int& depth);
+    };
     // not found in leetode until now.
     class left_view
     {

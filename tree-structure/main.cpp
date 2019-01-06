@@ -20,11 +20,12 @@ void test_lcc102();
 void test_lcc103();
 void test_lcc107();
 void test_lcc108();
+void test_lcc110();
 //Binary Search tree
 
 int main()
 {
-    test_lcc108();
+    test_lcc110();
 }
 void testlc687()
 {
@@ -477,4 +478,53 @@ void test_lcc108()
   vector<vector<int> > vals = C1->levelOrder(root);
   cout << "[108] Output:" << endl;
   print_matrix(vals);
+}
+void test_lcc110()
+{
+  using namespace ts;
+#if 1
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(3);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(4);
+  TreeNode *node4 = new TreeNode(5);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(6);
+  node2->right = node5;
+  TreeNode *node6 = new TreeNode(7);
+  node3->left = node6;
+#elif 0
+  TreeNode *root = new TreeNode(1);
+#elif 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(3);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(4);
+  TreeNode *node4 = new TreeNode(5);
+  node1->left = node3;
+  node1->right = node4;
+  TreeNode *node5 = new TreeNode(6);
+  TreeNode *node6 = new TreeNode(7);
+  node2->left = node5;
+  node2->right = node6;
+#elif 0
+  TreeNode *root = new TreeNode(1);
+  TreeNode *node1 = new TreeNode(2);
+  TreeNode *node2 = new TreeNode(2);
+  root->left = node1;
+  root->right = node2;
+  TreeNode *node3 = new TreeNode(3);
+  TreeNode *node4 = new TreeNode(3);
+  node1->right = node3;
+  node2->right = node4;
+#endif
+  lcc110 *C = new lcc110;
+  bool res = C->isBalanced(root);
+  cout << "[110] Output: " << boolalpha << res << endl;
+  delete C;
 }

@@ -743,4 +743,35 @@ namespace ts
       root->right = right;
       return root;
     }
+    bool lcc110::isBalanced(TreeNode* root)
+    {
+      if(nullptr == root) return true;
+      int lheight = 0, rheight = 0;
+      bool l = false, r = false;
+      l = isBalanced(root->left, lheight);
+      r = isBalanced(root->right, rheight);
+      if(l && r && abs(lheight-rheight) <= 1)
+        return true;
+      return false;
+    }
+    bool lcc110::isBalanced(TreeNode* root, int& depth)
+    {
+      if(nullptr == root)
+      {
+        depth = 0;
+        return true;
+      }
+      if(nullptr == root->left && nullptr == root->right)
+      {
+        depth = 1;
+        return true;
+      }
+      int lheight = 0, rheight = 0;
+      bool l = false, r = false;
+      l = isBalanced(root->left, lheight);
+      r = isBalanced(root->right, rheight);
+      depth = max(lheight, rheight) + 1;
+      if(l && r && abs(lheight-rheight) <=1 )return true;
+      return false;
+    }
    }
