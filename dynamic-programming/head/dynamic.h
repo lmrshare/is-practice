@@ -89,5 +89,10 @@ namespace dp
       public:
           int uniquePathsWithObstacles(vector<vector<int> >& obstacleGrid);
     };
+    class lcc264
+    {
+        public:
+          int nthUglyNumber(int n);
+    };
 }
 #endif

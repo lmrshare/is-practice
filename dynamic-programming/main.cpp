@@ -13,9 +13,10 @@ void test_lccxxx();
 void test_lcc53();
 void test_lcc62();
 void test_lcc63();
+void test_lcc264();
 int main()
 {
-    test_lcc63();
+    test_lcc264();
     return 0;
 }
 void test_lc121()
@@ -149,4 +150,10 @@ void test_lcc63()
 #endif
   int num = C->uniquePathsWithObstacles(og);
   cout << "[63]Output: " << num << endl;
+}
+void test_lcc264()
+{
+    dp::lcc264 *C = new dp::lcc264();
+    int val = C->nthUglyNumber(10);
+    cout << "[264]Output: " << val << endl;
 }
