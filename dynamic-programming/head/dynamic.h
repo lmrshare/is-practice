@@ -99,5 +99,11 @@ namespace dp
         public:
           int numSquares(int n);
     };
+    //执行用时: 16 ms, 在Longest Increasing Subsequence的C++提交中击败了72.86% 的用户
+    class lcc300
+    {
+        public:
+            int lengthOfLIS(vector<int>& nums);
+    };
 }
 #endif

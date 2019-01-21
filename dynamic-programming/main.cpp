@@ -15,9 +15,10 @@ void test_lcc62();
 void test_lcc63();
 void test_lcc264();
 void test_lcc279();
+void test_lcc300();
 int main()
 {
-    test_lcc279();
+    test_lcc300();
     return 0;
 }
 void test_lc121()
@@ -164,5 +165,17 @@ void test_lcc279()
     dp::lcc279 *C = new dp::lcc279();
     int res = C->numSquares(12);
     cout << "[279]Output: " << res << endl;
+    delete C;
+}
+void test_lcc300()
+{
+    dp::lcc300 *C = new dp::lcc300;
+#if 0
+    vector<int> nums{10,9,2,5,3,7,101,18};
+#elif 1
+    vector<int> nums{-2, -1};
+#endif
+    int res = C->lengthOfLIS(nums);
+    cout << "[300]Output: " << res << endl;
     delete C;
 }
