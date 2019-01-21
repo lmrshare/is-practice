@@ -493,4 +493,20 @@ namespace dp
         }
         return k[n-1]; 
     }
+    int lcc279::numSquares(int n)
+    {
+        if(0 == n || 1 == n) return 1;
+        vector<int> dp(n+1, 0);
+        dp[1] = 1;
+        for(int i = 2; i<=n; ++i)
+        {
+            for(int j = 1; i-j*j>=0; ++j)
+            {
+                int tmp = 1 + dp[i - j*j];
+                if(1 == j) dp[i] = tmp;
+                if(tmp < dp[i]) dp[i] = tmp;
+            }
+        }
+        return dp[n];
+    }
 }

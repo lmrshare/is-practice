@@ -14,9 +14,10 @@ void test_lcc53();
 void test_lcc62();
 void test_lcc63();
 void test_lcc264();
+void test_lcc279();
 int main()
 {
-    test_lcc264();
+    test_lcc279();
     return 0;
 }
 void test_lc121()
@@ -156,4 +157,12 @@ void test_lcc264()
     dp::lcc264 *C = new dp::lcc264();
     int val = C->nthUglyNumber(10);
     cout << "[264]Output: " << val << endl;
+    delete C;
+}
+void test_lcc279()
+{
+    dp::lcc279 *C = new dp::lcc279();
+    int res = C->numSquares(12);
+    cout << "[279]Output: " << res << endl;
+    delete C;
 }

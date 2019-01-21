@@ -94,5 +94,10 @@ namespace dp
         public:
           int nthUglyNumber(int n);
     };
+    class lcc279
+    {
+        public:
+          int numSquares(int n);
+    };
 }
 #endif
