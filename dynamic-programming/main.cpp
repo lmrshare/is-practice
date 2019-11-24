@@ -16,9 +16,12 @@ void test_lcc63();
 void test_lcc264();
 void test_lcc279();
 void test_lcc300();
+void test_lcc303();
+void test_lcc304();
+void test_lcc309();
 int main()
 {
-    test_lcc300();
+    test_lcc309();
     return 0;
 }
 void test_lc121()
@@ -177,5 +180,48 @@ void test_lcc300()
 #endif
     int res = C->lengthOfLIS(nums);
     cout << "[300]Output: " << res << endl;
+    delete C;
+}
+void test_lcc303()
+{
+    vector<int> nums{-2, 0, 3, -5, 2, -1};
+    dp::NumArray *obj = new dp::NumArray(nums);
+    int param = obj->sumRange(0, 5);
+    cout << "[303]Output: " << param << endl;
+}
+void test_lcc304()
+{
+#if 0
+    vector<vector<int> >nums{
+        {3, 0, 1, 4, 2},
+        {5, 6, 3, 2, 1},
+        {1, 2, 0, 1, 5},
+        {4, 1, 0, 1, 7},
+        {1, 0, 3, 0, 5}
+    };
+#elif 1
+    vector<vector<int> >nums{
+        {-1},
+        {0, 0, 0, 0}
+    }; 
+#endif
+    dp::NumMatrix *obj = new dp::NumMatrix(nums);
+#if 0
+    int param = obj->sumRegion(2, 1, 4, 3);
+#elif 0
+    int param = obj->sumRegion(1, 1, 2, 2);
+#elif 0
+    int param = obj->sumRegion(1, 2, 2, 4);
+#elif 1
+    int param = obj->sumRegion(0, 0, 0, 0);
+#endif
+    cout << "[304]Output: " << param << endl;
+}
+void test_lcc309()
+{
+    dp::lcc309 *C = new dp::lcc309;
+    vector<int> num{1,2,3,0,2};
+    int price = C->maxProfit(num);
+    cout << "[309]Output: " << price << endl;
     delete C;
 }

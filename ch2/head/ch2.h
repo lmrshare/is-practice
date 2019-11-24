@@ -27,7 +27,7 @@ using namespace std;
 class section2_1_1
 {
   public:
-    //2.1.1 Remove Duplicates from Array: duplicate degree 1
+    //2.1.1 Remove Duplicates from Array: duplicate degree 1(lcc26)
     int removeDuplicates(vector<int>& nums);
     int removeDuplicates2(vector<int>& nums);
     int removeDuplicates3(vector<int>& nums);
@@ -37,7 +37,7 @@ class section2_1_1
 class section2_1_2
 {
   public:
-    //2.1.2 Remove Duplicates which are allowed at least twice from array-----duplicate degree 2
+    //2.1.2 Remove Duplicates which are allowed at least twice from array-----duplicate degree 2(lcc80)
     int removeDuplicates(vector<int>& nums);
     int removeDuplicates2(vector<int>& nums);
     // I make the function
@@ -47,19 +47,20 @@ class section2_1_2
 class section2_1_3
 {
   public:
-    //2.1.3 Search in Rotated Sorted Array
+    //2.1.3 Search in Rotated Sorted Array(lcc33)
     int search(const vector<int>& nums, int target);
     int search1(const vector<int>& nums, int target);
 };
 class section2_1_4
 {
   public:
+    // lcc81(索旋转排序数组2)
     int search(const vector<int>& nums, int target);
 };
 class section2_1_5
 {
   public:
-    //O(m+n)
+    //O(m+n), lcc4(寻找两个有序数组的中位数)
     double findMedianSortedArrays(const vector<int>& A, const vector<int>& B);
     double findMedianSortedArrays1(const vector<int>& A, const vector<int>& B);
   private:
@@ -72,6 +73,7 @@ class section2_1_5
 class section2_1_6
 {
   public:
+    //lcc298(二叉树最长连续序列)
     int longestConsecutive(const vector<int>& nums);
     int longestConsecutive1(const vector<int>& nums);
   private:
@@ -80,21 +82,25 @@ class section2_1_6
 class section2_1_7
 {
   public:
+    //lcc1(两数之和)
     vector<int> two_sum(vector<int>& nums, int target);
 };
 class section2_1_8
 {
   public:
+    //lcc259(较小的三数之和)
     vector<vector<int> > three_sum(vector<int>& nums,int target=0);
 };
 class section2_1_9{
   public:
+  //lcc16(最接近的三数之和)
   int three_sum_closest(vector<int>& nums, int target=0);
 };
 //8
 class section2_1_10
 {
   public:
+    //lcc454(四数相加)
     vector<vector<int> > four_sum(vector<int>& nums, int target=0);
     vector<vector<int> > four_sum_hash(vector<int>& nums, int target=0);
 };
@@ -102,6 +108,7 @@ class section2_1_10
 class section2_1_11
 {
   public:
+    //lcc27(移除元素)
     int remove_element(vector<int>& nums, int target=0);
     int remove_element2(vector<int>& nums, int target=0);
 };
@@ -109,6 +116,7 @@ class section2_1_11
 class section2_1_12
 {
   public:
+    //lcc31(下一个排列)
     void next_permutation(vector<int>& nums);
     //写个全排列
 };
@@ -116,6 +124,7 @@ class section2_1_12
 class section2_1_13
 {
   public:
+    //lcc60(第k个排列)
     string get_permutation(int n, int k);
   private:
     int factorial(int n);
@@ -126,6 +135,7 @@ class section2_1_13
 class section2_1_14
 {
   public:
+    //lcc36(有效的数独)
     bool is_valid_sudoku(const vector<vector<char> >& board, vector<vector<char> >& err);
   private:
     bool check(char ch, bool used[9]);
@@ -134,12 +144,14 @@ class section2_1_14
 class section2_1_15
 {
   public:
+  //lcc42(接雨水)
   int trap(const vector<int>& height);
 };
 //14
 class section2_1_16
 {
   public:
+    //lcc48(旋转图像)
     void rotate(vector<vector<int> >& matrix);//mine 9ms
     void rotate2(vector<vector<int> >& matrix);//better implementation 4ms
 };
@@ -147,12 +159,14 @@ class section2_1_16
 class section2_1_17
 {
   public:
+    //lcc66(加一)
     vector<int> plus_one(vector<int>& digits);
 };
 //16, 斐波那契数列，这道题做的不好
 class section2_1_18
 {
   public:
+    //lcc746(使用最小花费爬楼梯)
     int climb_chairs(int n);
     int climb_chairs2(int n);
 
@@ -161,12 +175,14 @@ class section2_1_18
 class section2_1_19
 {
   public:
+    //lcc89(格雷编码)
     vector<int> gray_code(int n);
 };
 //18
 class section2_1_20
 {
   public:
+    //lcc73(矩阵置零)
     void set_zeros(vector<vector<int> >& matrix);
     void set_zeros1(vector<vector<int> >& matrix);
 };
@@ -174,24 +190,28 @@ class section2_1_20
 class section2_1_21
 {
   public:
+    //lcc134(加油站)
     int can_complete_circuit(vector<int>& gas, vector<int>& cost);
 };
 //20
 class section2_1_22
 {
   public:
+    //lcc575(分糖果)
     int candy(vector<int>& ratings);
 };
 //21
 class section2_1_23
 {
   public:
+    //lcc619(只出现一次的最大数字)
     int single_number(vector<int>& nums);
 };
 //22
 class section2_1_24
 {
   public:
+    //lcc137(只出现一次的数字2)
     int single_number(vector<int>& nums);
 };
 
@@ -333,11 +353,5 @@ private:
 //    print_list(head);
 //    return head;
 //}
-
-class section2_2_10
-{
-public:
-    random_list_node* copy_random_list(random_list_node* head);//UNDO
-};
 
 #endif

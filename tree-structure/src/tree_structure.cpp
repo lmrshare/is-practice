@@ -840,4 +840,5 @@ namespace ts
 #elif 1
     return true;
 #endif
-   }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "l583",
+        "type": "shell",
+        "command": "clang++",
+        "args": [
+          "-std=c++17",
+          "-stdlib=libc++",
+          "l583.cpp",
+          "-o",
+          "l583.out",
+          "--debug"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }

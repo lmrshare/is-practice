@@ -22,6 +22,7 @@ namespace p5
     class section5_1_1
     {
         public:
+            //lcc889(根据前序和后序遍历构造二叉树)
             void preorder_traversal(const TreeNode* root);//recursion version
             void preorder_traversal_queue(const TreeNode* root);//queue version
         private:
@@ -30,11 +31,13 @@ namespace p5
     class section5_1_2
     {
         public:
+            //lcc94(二叉树的中序遍历)
             void preorfer_inorder_traversal_stack(const TreeNode* root);
     };
     class section5_1_3
     {
         public:
+            //lcc106(从中序与后序遍历序列构造二叉树)
             void postorder_inorder_traversal_stack(const TreeNode* root);
     };
 
@@ -42,6 +45,7 @@ namespace p5
     class section5_2_1
     {
         public:
+            //lcc105(从前序与中序遍历序列构造二叉树)
             TreeNode* build_tree(vector<int>& preorder, vector<int>& inorder);
         private:
             TreeNode* build_tree(vector<int>::iterator pre_begin,
@@ -50,7 +54,7 @@ namespace p5
                                  vector<int>::iterator in_end
                                 );
     };
-    //skip residual of 5.2
+    //skip residual of 5.2; lcc95(不同的二叉搜索树2)
     class section5_3_1
     {
         public:

@@ -524,4 +524,51 @@ namespace dp
             if(dp[i] > res) res = dp[i];
         return res;
     }
+    NumArray::NumArray(vector<int> nums)
+    {
+        sum.resize(nums.size()+1);
+        sum[0] = 0;
+        for(size_t i = 1; i < sum.size(); ++i)
+            sum[i] = sum[i-1] + nums[i-1];
+    }
+    int NumArray::sumRange(int i, int j)
+    {
+        return sum[j+1]-sum[i];
+    }
+    NumMatrix::NumMatrix(vector<vector<int>> matrix)
+    {
+        sum.resize(matrix.size());
+        int i = 0;
+        for(auto v : matrix)
+           sum[i++].resize(v.size()); 
+        int sum_r;
+        for(int i = 0; i < matrix.size(); ++i)
+        {
+            sum_r = 0;
+            for(int j = 0; j < matrix[i].size(); ++j)
+            {
+                if(0 == j) sum_r = matrix[i][j];
+                else sum_r += matrix[i][j];
+                sum[i][j] = sum_r;
+            }
+        }
+        for(int i = 1; i < sum.size(); ++i)
+            for(int j = 0; j < sum[i].size(); ++j)
+                if(j <= sum[i-1].size())
+                    sum[i][j] += sum[i-1][j];
+
+    }
+    int NumMatrix::sumRegion(int row1, int col1, int row2, int col2)
+    {
+        row1--;
+        col1--;
+        if(row1 >=0 && col1 >= 0)
+            return sum[row2][col2]-sum[row2][col1]-sum[row1][col2]+sum[row1][col1];
+        else if(row1 < 0 && col1 >= 0)
+            return sum[row2][col2]-sum[row2][col1];
+        else if(row1 >=0 && col1 < 0)
+            return sum[row2][col2]-sum[row1][col2];
+        else
+            return sum[row2][col2];
+    }
 }

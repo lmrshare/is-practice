@@ -14,6 +14,7 @@ namespace p6
     class section6_6
     {
     public:
+        //lcc41(缺失的第一个正数)
         int firstMissingPositive(vector<int>& nums);
     private:
         void bucket_sort(vector<int>& A);

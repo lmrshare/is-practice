@@ -10,7 +10,7 @@ using namespace std;
 
 namespace gs
 {
-    class Node 
+    class Node
     {
         public:
             int val;
@@ -30,7 +30,7 @@ namespace gs
         State():node(nullptr), chid(0){}
         State(Node *node_): node(node_), chid(0){}
     };
-    struct TreeNode 
+    struct TreeNode
     {
         int val;
         TreeNode *left;
@@ -43,7 +43,7 @@ namespace gs
         int  next;
         State2(TreeNode *node_, int next_): node(node_), next(next_) {}
     };
-    struct UndirectedGraphNode 
+    struct UndirectedGraphNode
     {
         int label;
         vector<UndirectedGraphNode *> neighbors;
@@ -67,7 +67,6 @@ namespace gs
     {
         public:
             int findBottomLeftValue(TreeNode* root);
-            
     };
     class lcc133//克隆图
     {

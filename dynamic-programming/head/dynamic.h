@@ -65,7 +65,7 @@ namespace dp
       public:
           int maxProfit(vector<int>& prices);
     };
-    class lc53 
+    class lc53
     {
       public:
           int maxSubArray(vector<int>& nums); 
@@ -104,6 +104,26 @@ namespace dp
     {
         public:
             int lengthOfLIS(vector<int>& nums);
+    };
+    //执行用时: 24 ms, 在Range Sum Query - Immutable的C++提交中击败了99.91% 的用户
+    //lcc303(区域和检索 - 数组不可变)
+    class NumArray
+    {
+        public:
+            NumArray(vector<int> nums);
+            int sumRange(int i, int j);
+        private:
+            vector<int> sum;
+    };
+    //执行用时: 20 ms, 在Range Sum Query 2D - Immutable的C++提交中击败了86.43% 的用户
+    //lcc304(二维区域和检索 - 矩阵不可变)
+    class NumMatrix
+    {
+        public:
+            NumMatrix(vector<vector<int>> matrix);
+            int sumRegion(int row1, int col1, int row2, int col2);
+        private:
+            vector<vector<int> > sum;
     };
 }
 #endif

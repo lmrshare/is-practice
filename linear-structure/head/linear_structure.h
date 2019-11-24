@@ -66,6 +66,5 @@ namespace ls
         public:
             int minAddToMakeValid(string S);
     };
-    
 }
 #endif

@@ -3,7 +3,7 @@
 
 namespace p4{
 
-    int largest_rectangle_area(std::vector<int>& height)
+  int largest_rectangle_area(std::vector<int>& height)
   {
     stack<int> s;
     height.push_back(0);

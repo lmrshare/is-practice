@@ -7,6 +7,7 @@ using namespace std;
 
 namespace p4{
 
+    //lcc84(柱状图中最大的矩形)
     int largest_rectangle_area(std::vector<int>& height);
 
 };

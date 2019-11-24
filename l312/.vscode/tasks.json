@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "l312",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-g",
+          "-std=c++17",
+          "-stdlib=libc++",
+          "l312.cpp",
+          "-o",
+          "l312",
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }

@@ -12,11 +12,11 @@ using namespace std;
 namespace ts
 {
     //tool function
-    struct TreeNode; 
+    struct TreeNode;
     void print_vector(vector<int>& nums);
     void print_matrix(vector<vector<int> >& nums);
     void print_tree(TreeNode *root);
-    struct TreeNode 
+    struct TreeNode
     {
         int val;
         TreeNode *left;
@@ -36,7 +36,7 @@ namespace ts
         private:
             int pathFromNode(TreeNode* root, int root_val);
     };
-    
+
     //Binary search and Sorting
     class lc852//Peak Index in a Mountain Array
     {
@@ -171,7 +171,7 @@ namespace ts
         public:
             vector<int> lv(TreeNode *root);
     };
-    class right_view
+    class right_view//lcc199(二叉树的右视图)
     {
         public:
             vector<int> rv(TreeNode *root);

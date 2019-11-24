@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A23D9F14F5C4AEF9F8E551D /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7EB0AFADB34B0BB0838336 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				6904571703DD462F8071281E /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		EC6B293CB7CD440291F8CE5F /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 09D81197F6094C7DAC053EBD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				1636C8856EF04B849FF28E53 /* CMake Rules */,
+			);
+			dependencies = (
+				89E9514676CE46379FC9B565 /* PBXTargetDependency */,
+				845221BCA3D64EA0B0C205A6 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		54E79C737F1646F08911CBAC /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CB6F13FF1CA04995921629BE /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */; };
+		BD9A53F622CD405893629359 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/l312.cpp */ = {isa = PBXBuildFile; fileRef = E8431A625C9B43E8B1F55341 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/l312.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		13CFA91622104BBF82F99229 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		CA50E9886D2E4986AAA6B008 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		CBD3EB5A49E542C49C6EDB37 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		FF794B7AC09F4C0EA53C81DB /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2EDC34043B6D4699AC88F73D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF68C1C301674374B6373E93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A23D9F14F5C4AEF9F8E551D;
+			remoteInfo = ZERO_CHECK;
+		};
+		C9033D6E21EF45448348EB1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF68C1C301674374B6373E93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A23D9F14F5C4AEF9F8E551D;
+			remoteInfo = ZERO_CHECK;
+		};
+		E4EBB7C839CE41E8912C746F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF68C1C301674374B6373E93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0A16131AE9144529D1B4195;
+			remoteInfo = l312;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A8C06C70ACB4834B68E8713 /* l312 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = l312; sourceTree = BUILT_PRODUCTS_DIR; };
+		3787515A76C34F3999284361 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CB6F13FF1CA04995921629BE /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E8431A625C9B43E8B1F55341 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/l312.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = l312.cpp; path = l312.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05956A6CE53944D48F21CF38 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		09F6CD486E624503B6879C22 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8431A625C9B43E8B1F55341 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/l312.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		19122F9F6FB34314B969414B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A8C06C70ACB4834B68E8713 /* l312 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		410C36DDEC8344CEB3B84E7B /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				05956A6CE53944D48F21CF38 /* CMake Rules */,
+				3787515A76C34F3999284361 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		54A54326A5404FDF88FF600E = {
+			isa = PBXGroup;
+			children = (
+				5AE6F4B64D974E22AB03837D /* l312 */,
+				410C36DDEC8344CEB3B84E7B /* ALL_BUILD */,
+				19122F9F6FB34314B969414B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AE6F4B64D974E22AB03837D /* l312 */ = {
+			isa = PBXGroup;
+			children = (
+				09F6CD486E624503B6879C22 /* Source Files */,
+				CB6F13FF1CA04995921629BE /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/CMakeLists.txt */,
+			);
+			name = l312;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0A16131AE9144529D1B4195 /* l312 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C260F15E885644AB92FD27C2 /* Build configuration list for PBXNativeTarget "l312" */;
+			buildPhases = (
+				4EF9D91D653C4F1D8AA12A09 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7EF6F1F87ED4D85B7EB78C2 /* PBXTargetDependency */,
+			);
+			name = l312;
+			productName = l312;
+			productReference = 1A8C06C70ACB4834B68E8713 /* l312 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF68C1C301674374B6373E93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1110;
+			};
+			buildConfigurationList = D75FF3C010FF477A989DB90D /* Build configuration list for PBXProject "l312" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				13CFA91622104BBF82F99229 /* Debug */,
+				CBD3EB5A49E542C49C6EDB37 /* Release */,
+				FF794B7AC09F4C0EA53C81DB /* MinSizeRel */,
+				CA50E9886D2E4986AAA6B008 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 54A54326A5404FDF88FF600E;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				EC6B293CB7CD440291F8CE5F /* ALL_BUILD */,
+				1A23D9F14F5C4AEF9F8E551D /* ZERO_CHECK */,
+				E0A16131AE9144529D1B4195 /* l312 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1636C8856EF04B849FF28E53 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build -f /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		6904571703DD462F8071281E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build -f /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8FC2FF4CF39240E7956048B0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F92103B69CE748CCB03A3ED3 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EF9D91D653C4F1D8AA12A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD9A53F622CD405893629359 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/l312.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		845221BCA3D64EA0B0C205A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0A16131AE9144529D1B4195 /* l312 */;
+			targetProxy = E4EBB7C839CE41E8912C746F /* PBXContainerItemProxy */;
+		};
+		89E9514676CE46379FC9B565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A23D9F14F5C4AEF9F8E551D /* ZERO_CHECK */;
+			targetProxy = C9033D6E21EF45448348EB1A /* PBXContainerItemProxy */;
+		};
+		A7EF6F1F87ED4D85B7EB78C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A23D9F14F5C4AEF9F8E551D /* ZERO_CHECK */;
+			targetProxy = 2EDC34043B6D4699AC88F73D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		186A70B73AA94C829E9CA0FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "     -Wall          -std=c++11  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = l312;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		27CF99689BCE410EBC93D8B7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		455F405ECA044A8797C8D63F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = l312;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5B5DA86BBAAD4BF4AFFB4EDF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/build";
+			};
+			name = MinSizeRel;
+		};
+		6160847AA22D473AB52EF2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		68E277670F0447BC92779ADA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = l312;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		71C99A02C13B40AE9B0864E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7A651E965FFB4A6E90C2397D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7BEE1AD83270451FB02CF15A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		823CB54EE28B43E7BE965090 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		96B61652854A42B9B19BFF17 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		9C071D34A862427EA47DC3A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/build";
+			};
+			name = Release;
+		};
+		A783C347D69F46E1A3B6F378 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build/build";
+			};
+			name = Debug;
+		};
+		C746C25D596E45918335D79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E5E17EE2D54947F3ACEC1029 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FB4E51453A474738BB141C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "     -Wall -std=c++11  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = l312;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/leetcode_projs/l312/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09D81197F6094C7DAC053EBD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A651E965FFB4A6E90C2397D /* Debug */,
+				71C99A02C13B40AE9B0864E1 /* Release */,
+				E5E17EE2D54947F3ACEC1029 /* MinSizeRel */,
+				823CB54EE28B43E7BE965090 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AE7EB0AFADB34B0BB0838336 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C746C25D596E45918335D79A /* Debug */,
+				6160847AA22D473AB52EF2CB /* Release */,
+				7BEE1AD83270451FB02CF15A /* MinSizeRel */,
+				27CF99689BCE410EBC93D8B7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C260F15E885644AB92FD27C2 /* Build configuration list for PBXNativeTarget "l312" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				186A70B73AA94C829E9CA0FA /* Debug */,
+				FB4E51453A474738BB141C70 /* Release */,
+				68E277670F0447BC92779ADA /* MinSizeRel */,
+				455F405ECA044A8797C8D63F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D75FF3C010FF477A989DB90D /* Build configuration list for PBXProject "l312" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A783C347D69F46E1A3B6F378 /* Debug */,
+				9C071D34A862427EA47DC3A4 /* Release */,
+				5B5DA86BBAAD4BF4AFFB4EDF /* MinSizeRel */,
+				96B61652854A42B9B19BFF17 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF68C1C301674374B6373E93 /* Project object */;
+}

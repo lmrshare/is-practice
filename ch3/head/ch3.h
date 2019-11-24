@@ -37,13 +37,13 @@ namespace p3{
         list_node* next;
         list_node(int x) : val(x), next(nullptr) {};
     };
-    //3.2
+    //3.2: lcc28(实现 strStr())
     int strStr(const string& haystack, const string& needle);
-    //3.3
+    //3.3: lcc8(字符串转换整数 (atoi)
     int myAtoi(const string& str);
-    //3.4 Add Binary
+    //3.4 Add Binary: lcc67(二进制求和)
     string addBinary(string a, string b);
-    //3.5 longest palindromic substring
+    //3.5 longest palindromic substring: lcc516(最长回文子序列)
     class Solution
     {
     public:
@@ -80,7 +80,7 @@ namespace p3{
         unordered_map<pair<Iterator, Iterator>, string> cache;
         unordered_map<pair<string::const_iterator, string::const_iterator>, string>cache1;//not use, just for test
     };
-    //3.7
+    //3.7 lcc44(通配符匹配)
     bool isMatch(string s, string p);
 };
 
