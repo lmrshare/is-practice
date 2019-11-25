@@ -1,4 +1,6 @@
 #include "ch2.h"
+#include <climits>
+#include <cstdint>
 #include <algorithm>
 #include <numeric>
 #include <assert.h>

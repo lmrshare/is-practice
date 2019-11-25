@@ -3,6 +3,7 @@
 #include <numeric>
 #include <assert.h>
 #include <iostream>
+#include <climits>
 using namespace std;
 
 namespace p3{

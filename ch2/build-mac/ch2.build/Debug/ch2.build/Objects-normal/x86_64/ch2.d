@@ -1,3 +1,3 @@
 dependencies: \
-  /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp \
-  /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/head/ch2.h
+  /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp \
+  /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/head/ch2.h

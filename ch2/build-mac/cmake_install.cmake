@@ -1,4 +1,4 @@
-# Install script for directory: /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2
+# Install script for directory: /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

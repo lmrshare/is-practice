@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeFiles/ZERO_CHECK
+	/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/CMakeFiles/ZERO_CHECK
 
 
-/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeFiles/ZERO_CHECK: 
+/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeScripts/ReRunCMake.make
+	make -f /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/CMakeScripts/ReRunCMake.make

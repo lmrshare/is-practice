@@ -499,33 +499,6 @@ void test_LRU()
     cache->get(4);
 }
 
-void test_swap_pairs()
-{
-    std::vector<int> v = {1, 2, 3, 4};
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(v.begin(), v.end(), g);
-    std::copy(v.begin(), v.end(), std::ostream_iterator<int>(std::cout, " "));
-    std::cout << "\n";
-    
-    list_node* head = nullptr;
-    list_node* prev = head;
-    for(int i = 0; i < 4;++i)
-    {
-        if(prev == nullptr)
-        {
-            head = new struct list_node(v[i]);
-            prev = head;
-        }
-        else
-        {
-            prev->next = new struct list_node(v[i]);
-            prev = prev->next;
-        }
-    }
-//    swap_pairs(head);
-//    print_list(head);
-}
 void test_section2_2_10()
 {
 #if 0

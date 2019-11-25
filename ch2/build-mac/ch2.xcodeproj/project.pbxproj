@@ -7,205 +7,205 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		6175A333FBB9432EA9F11DA3 /* ALL_BUILD */ = {
+		3B886C53E19043ACBE76EBEA /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 5605AC0DBC4D4D008FEBA8B4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 82A7736071504DCCBBA96FC4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				A33C60544E744982A726564E /* CMake Rules */,
-			);
-			dependencies = (
-				8F59C538127E469A92D49465 /* PBXTargetDependency */,
-				B57ECFD137E543978F2602C3 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
-		6F8B78EF6D02472E84BF601E /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2105DAAC145844E68BEEC467 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				38737A3478094AA090C54E21 /* CMake Rules */,
+				DD95DC886A934B30AEF83F65 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
+		C73018EB55B34FD7AC428832 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DA85F40381384D44B6EDFDE8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				363FA2601B094CCB9C47F04D /* CMake Rules */,
+			);
+			dependencies = (
+				CACBA52FA575428C9814DEDB /* PBXTargetDependency */,
+				46CA73379A32487FBE1E5F63 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4C2D33F58EA24AEBA95A5DAB /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp */ = {isa = PBXBuildFile; fileRef = DCC07B1AF5AC4F31ABE884BC /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp */; };
-		7AE905D5AE31405F8AC9EFFF /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/main.cpp */ = {isa = PBXBuildFile; fileRef = E76219ABF37F4745A7AD49FD /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/main.cpp */; };
-		B54B946FD7FA42C59A651712 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = EE34C83E78B740A58BED3100 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */; };
+		56CABA83F5D94DB28271C5E7 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/main.cpp */ = {isa = PBXBuildFile; fileRef = 063AFBBEEEC44EFAB58CCE0B /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/main.cpp */; };
+		7DAE69F9CDD541AC8402912B /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2EB847B1B99942D28B8FE161 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */; };
+		C65BECCA9A4645A5A9A7B670 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp */ = {isa = PBXBuildFile; fileRef = 94AB74E441EE499D9B4BEA8D /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		B0503547C2C7433F9A89E765 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		B071EA535F0C44269A765384 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		F714921948B8453B81369B3C /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		F84A6940C2054C7D94FE714E /* Debug */ = {
+		11F2667E4C0C480CB05F0315 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
+		1C30F54D88764DD2B9C59EBE /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		5A064B8023F747498B648684 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		CB78D6B6826D48F7BB11B89A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		2FC3C92528F24C5D879E04C3 /* PBXContainerItemProxy */ = {
+		1FB4304D10CB4A5680E58F36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EEFDEAB2ED594DA79EBB45CF /* Project object */;
+			containerPortal = 780BD17401684C0E8B4D4AC1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60A3CC83A8B84B26B8FEF74B;
+			remoteGlobalIDString = A0D2B7896B27461FB8B21F2E;
 			remoteInfo = ch2;
 		};
-		4BC1C260EE0C4F168DCE2652 /* PBXContainerItemProxy */ = {
+		2D58DC450DBF4564ACD144E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EEFDEAB2ED594DA79EBB45CF /* Project object */;
+			containerPortal = 780BD17401684C0E8B4D4AC1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6F8B78EF6D02472E84BF601E;
+			remoteGlobalIDString = 3B886C53E19043ACBE76EBEA;
 			remoteInfo = ZERO_CHECK;
 		};
-		69D84C9A9BB84904A4417FC8 /* PBXContainerItemProxy */ = {
+		B7FC9BD6C33D44F18B8A99BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EEFDEAB2ED594DA79EBB45CF /* Project object */;
+			containerPortal = 780BD17401684C0E8B4D4AC1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6F8B78EF6D02472E84BF601E;
+			remoteGlobalIDString = 3B886C53E19043ACBE76EBEA;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16043B0DA8E0445E93323A63 /* ch2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = ch2; sourceTree = BUILT_PRODUCTS_DIR; };
-		21C4B2B01B514B6E91999372 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DCC07B1AF5AC4F31ABE884BC /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ch2.cpp; path = src/ch2.cpp; sourceTree = SOURCE_ROOT; };
-		E76219ABF37F4745A7AD49FD /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
-		EE34C83E78B740A58BED3100 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		063AFBBEEEC44EFAB58CCE0B /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		2EB847B1B99942D28B8FE161 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		64A145035CDC41D4BC8322C2 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		94AB74E441EE499D9B4BEA8D /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ch2.cpp; path = src/ch2.cpp; sourceTree = SOURCE_ROOT; };
+		EA6861F92C3345458EBB2538 /* ch2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = ch2; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		246B106A135243988BB02D93 = {
+		40078C70358D4AEF8CB20070 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				C8EE4ADE304040F783D0BCA4 /* ch2 */,
-				4F38239B05E741FAB6C7CED5 /* ALL_BUILD */,
-				973792746DC0461A81D3D6EC /* Products */,
+				C15B02C5F1F44595ACD6EEE7 /* CMake Rules */,
+				64A145035CDC41D4BC8322C2 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */,
 			);
+			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		25E894EFA4A04141969C0FB1 /* CMake Rules */ = {
+		486F6C5F20094D3EA55428CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6861F92C3345458EBB2538 /* ch2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD63D4D6DA6C4FD090F53D6C /* ch2 */ = {
+			isa = PBXGroup;
+			children = (
+				D8344DD62A6A468E97A76992 /* Source Files */,
+				2EB847B1B99942D28B8FE161 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/CMakeLists.txt */,
+			);
+			name = ch2;
+			sourceTree = "<group>";
+		};
+		C15B02C5F1F44595ACD6EEE7 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		4F38239B05E741FAB6C7CED5 /* ALL_BUILD */ = {
+		D8344DD62A6A468E97A76992 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				25E894EFA4A04141969C0FB1 /* CMake Rules */,
-				21C4B2B01B514B6E91999372 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		65E4A53F7B8D44488273DAFA /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				E76219ABF37F4745A7AD49FD /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/main.cpp */,
-				DCC07B1AF5AC4F31ABE884BC /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp */,
+				063AFBBEEEC44EFAB58CCE0B /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/main.cpp */,
+				94AB74E441EE499D9B4BEA8D /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		973792746DC0461A81D3D6EC /* Products */ = {
+		E972D7E2D92349FF8DD2AEDF = {
 			isa = PBXGroup;
 			children = (
-				16043B0DA8E0445E93323A63 /* ch2 */,
+				BD63D4D6DA6C4FD090F53D6C /* ch2 */,
+				40078C70358D4AEF8CB20070 /* ALL_BUILD */,
+				486F6C5F20094D3EA55428CE /* Products */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C8EE4ADE304040F783D0BCA4 /* ch2 */ = {
-			isa = PBXGroup;
-			children = (
-				65E4A53F7B8D44488273DAFA /* Source Files */,
-				EE34C83E78B740A58BED3100 /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/CMakeLists.txt */,
-			);
-			name = ch2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60A3CC83A8B84B26B8FEF74B /* ch2 */ = {
+		A0D2B7896B27461FB8B21F2E /* ch2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4285B24074A4430E8BCF8FD2 /* Build configuration list for PBXNativeTarget "ch2" */;
+			buildConfigurationList = 82E40DAABCAA4D789691C852 /* Build configuration list for PBXNativeTarget "ch2" */;
 			buildPhases = (
-				A4FE87A16F084FD397AB1FB6 /* Sources */,
+				FE3F1153308D44CDB39FF8CC /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7F8C8F7C26E14B56B92CC46E /* PBXTargetDependency */,
+				41BF9C9E1F084A97B81EEF23 /* PBXTargetDependency */,
 			);
 			name = ch2;
 			productName = ch2;
-			productReference = 16043B0DA8E0445E93323A63 /* ch2 */;
+			productReference = EA6861F92C3345458EBB2538 /* ch2 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EEFDEAB2ED594DA79EBB45CF /* Project object */ = {
+		780BD17401684C0E8B4D4AC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1110;
 			};
-			buildConfigurationList = 90DBC7922EDF4B75B3F4CA63 /* Build configuration list for PBXProject "ch2" */;
+			buildConfigurationList = 684206802A0446F0BE7D3669 /* Build configuration list for PBXProject "ch2" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				F84A6940C2054C7D94FE714E /* Debug */,
-				B0503547C2C7433F9A89E765 /* Release */,
-				B071EA535F0C44269A765384 /* MinSizeRel */,
-				F714921948B8453B81369B3C /* RelWithDebInfo */,
+				11F2667E4C0C480CB05F0315 /* Debug */,
+				CB78D6B6826D48F7BB11B89A /* Release */,
+				1C30F54D88764DD2B9C59EBE /* MinSizeRel */,
+				5A064B8023F747498B648684 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 246B106A135243988BB02D93;
+			mainGroup = E972D7E2D92349FF8DD2AEDF;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				6175A333FBB9432EA9F11DA3 /* ALL_BUILD */,
-				6F8B78EF6D02472E84BF601E /* ZERO_CHECK */,
-				60A3CC83A8B84B26B8FEF74B /* ch2 */,
+				C73018EB55B34FD7AC428832 /* ALL_BUILD */,
+				3B886C53E19043ACBE76EBEA /* ZERO_CHECK */,
+				A0D2B7896B27461FB8B21F2E /* ch2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02B52FA7988F4ECD9427701F = {
+		31366C975341404E865A45B0 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,7 +220,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		38737A3478094AA090C54E21 /* CMake Rules */ = {
+		363FA2601B094CCB9C47F04D /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,10 +228,10 @@ exit 0";
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac -f /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac -f /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		9D539CDE5EB640439ADC681C = {
+		831C73088C704589831FF4CA = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,7 +246,7 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		A33C60544E744982A726564E /* CMake Rules */ = {
+		DD95DC886A934B30AEF83F65 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,43 +254,108 @@ exit 0";
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac -f /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac -f /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A4FE87A16F084FD397AB1FB6 /* Sources */ = {
+		FE3F1153308D44CDB39FF8CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AE905D5AE31405F8AC9EFFF /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/main.cpp */,
-				4C2D33F58EA24AEBA95A5DAB /* /Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/src/ch2.cpp */,
+				56CABA83F5D94DB28271C5E7 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/main.cpp */,
+				C65BECCA9A4645A5A9A7B670 /* /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/src/ch2.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7F8C8F7C26E14B56B92CC46E /* PBXTargetDependency */ = {
+		41BF9C9E1F084A97B81EEF23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6F8B78EF6D02472E84BF601E /* ZERO_CHECK */;
-			targetProxy = 4BC1C260EE0C4F168DCE2652 /* PBXContainerItemProxy */;
+			target = 3B886C53E19043ACBE76EBEA /* ZERO_CHECK */;
+			targetProxy = B7FC9BD6C33D44F18B8A99BA /* PBXContainerItemProxy */;
 		};
-		8F59C538127E469A92D49465 /* PBXTargetDependency */ = {
+		46CA73379A32487FBE1E5F63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 60A3CC83A8B84B26B8FEF74B /* ch2 */;
-			targetProxy = 2FC3C92528F24C5D879E04C3 /* PBXContainerItemProxy */;
+			target = 3B886C53E19043ACBE76EBEA /* ZERO_CHECK */;
+			targetProxy = 2D58DC450DBF4564ACD144E6 /* PBXContainerItemProxy */;
 		};
-		B57ECFD137E543978F2602C3 /* PBXTargetDependency */ = {
+		CACBA52FA575428C9814DEDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6F8B78EF6D02472E84BF601E /* ZERO_CHECK */;
-			targetProxy = 69D84C9A9BB84904A4417FC8 /* PBXContainerItemProxy */;
+			target = A0D2B7896B27461FB8B21F2E /* ch2 */;
+			targetProxy = 1FB4304D10CB4A5680E58F36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08D945B3A11A4C3883F827E5 /* MinSizeRel */ = {
+		03555048A97243C4A3FEFE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/head");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "     -Wall          -std=c++11  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ch2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		040A72B2DA934054A0C7F59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		221ADFFB9AD64AE1A8D02954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/build";
+			};
+			name = Debug;
+		};
+		35D67336142F43619D9E89F8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/build";
+			};
+			name = RelWithDebInfo;
+		};
+		4054C6F052514C8BA471D82A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -301,7 +366,7 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/head");
+				HEADER_SEARCH_PATHS = ("/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/head");
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
@@ -309,13 +374,73 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ch2;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		3979DC56F1FE4D488E8FA8A1 /* Release */ = {
+		61F0F3AA303D4F7DB073E1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		67C6FF14588A4BB1825B0EEA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6BA86235ED464E87AF63B1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/build";
+			};
+			name = Release;
+		};
+		6F5E5E62670440AAA7F90B43 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac/build";
+			};
+			name = MinSizeRel;
+		};
+		83EDCFDDAB5E44849DED1E4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -326,7 +451,7 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/head");
+				HEADER_SEARCH_PATHS = ("/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/head");
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CPLUSPLUSFLAGS = "     -Wall -std=c++11  ";
@@ -334,13 +459,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ch2;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Release;
 		};
-		6A3F237F80554BF58F9EF726 /* RelWithDebInfo */ = {
+		97D3122EA4D948F4A1EB7592 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -354,165 +479,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		7294EE70EB634C96BCD3CDF0 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/build";
-			};
-			name = MinSizeRel;
-		};
-		7542EC73712642D48FE3A61A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		77F435F614F74123AA8F5DE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/head");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "     -Wall          -std=c++11  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ch2;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		9081C304F6214A6A95C1CCDC /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		94F4820EB6D042249F88E614 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/build";
-			};
-			name = Debug;
-		};
-		97ADF5E4E19549019DC82835 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		9D976EDE691342668C4F3108 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		D19DFBD3FE4C4832BFF5B603 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		D35357AA03E34C718518E40C /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/build";
-			};
-			name = RelWithDebInfo;
-		};
-		E19AD0FC9C9C48D797814BD4 /* RelWithDebInfo */ = {
+		A0EA154EF8DB4269B8A112E1 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -523,7 +496,7 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/head");
+				HEADER_SEARCH_PATHS = ("/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/head");
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
@@ -531,33 +504,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ch2;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		E7342D52F8B44E7BAB9AA3F3 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		E82CA29A66194AE59147E984 /* Debug */ = {
+		A4250B28DBF0419D86B5A822 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -571,69 +524,120 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		E956706CAAB244228DF6BB3B /* Release */ = {
+		A94C9B73F1E74BDAB89DD0D7 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Volumes/LMR_1T/base/ee/information-science-code/is-practice/ch2/build-mac/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Release;
+			name = MinSizeRel;
+		};
+		B4DB36B176434BE1ADD4C821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BAC40BDC57EB46D3A3C9728B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build-mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2105DAAC145844E68BEEC467 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		684206802A0446F0BE7D3669 /* Build configuration list for PBXProject "ch2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E82CA29A66194AE59147E984 /* Debug */,
-				9D976EDE691342668C4F3108 /* Release */,
-				9081C304F6214A6A95C1CCDC /* MinSizeRel */,
-				7542EC73712642D48FE3A61A /* RelWithDebInfo */,
+				221ADFFB9AD64AE1A8D02954 /* Debug */,
+				6BA86235ED464E87AF63B1AF /* Release */,
+				6F5E5E62670440AAA7F90B43 /* MinSizeRel */,
+				35D67336142F43619D9E89F8 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		4285B24074A4430E8BCF8FD2 /* Build configuration list for PBXNativeTarget "ch2" */ = {
+		82A7736071504DCCBBA96FC4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77F435F614F74123AA8F5DE0 /* Debug */,
-				3979DC56F1FE4D488E8FA8A1 /* Release */,
-				08D945B3A11A4C3883F827E5 /* MinSizeRel */,
-				E19AD0FC9C9C48D797814BD4 /* RelWithDebInfo */,
+				A4250B28DBF0419D86B5A822 /* Debug */,
+				61F0F3AA303D4F7DB073E1FB /* Release */,
+				A94C9B73F1E74BDAB89DD0D7 /* MinSizeRel */,
+				BAC40BDC57EB46D3A3C9728B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5605AC0DBC4D4D008FEBA8B4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		82E40DAABCAA4D789691C852 /* Build configuration list for PBXNativeTarget "ch2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D19DFBD3FE4C4832BFF5B603 /* Debug */,
-				97ADF5E4E19549019DC82835 /* Release */,
-				E7342D52F8B44E7BAB9AA3F3 /* MinSizeRel */,
-				6A3F237F80554BF58F9EF726 /* RelWithDebInfo */,
+				03555048A97243C4A3FEFE5E /* Debug */,
+				83EDCFDDAB5E44849DED1E4F /* Release */,
+				4054C6F052514C8BA471D82A /* MinSizeRel */,
+				A0EA154EF8DB4269B8A112E1 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		90DBC7922EDF4B75B3F4CA63 /* Build configuration list for PBXProject "ch2" */ = {
+		DA85F40381384D44B6EDFDE8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94F4820EB6D042249F88E614 /* Debug */,
-				E956706CAAB244228DF6BB3B /* Release */,
-				7294EE70EB634C96BCD3CDF0 /* MinSizeRel */,
-				D35357AA03E34C718518E40C /* RelWithDebInfo */,
+				B4DB36B176434BE1ADD4C821 /* Debug */,
+				040A72B2DA934054A0C7F59C /* Release */,
+				67C6FF14588A4BB1825B0EEA /* MinSizeRel */,
+				97D3122EA4D948F4A1EB7592 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EEFDEAB2ED594DA79EBB45CF /* Project object */;
+	rootObject = 780BD17401684C0E8B4D4AC1 /* Project object */;
 }
