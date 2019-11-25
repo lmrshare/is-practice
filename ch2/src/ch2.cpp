@@ -19,7 +19,7 @@ OutIt section2_1_1::removeDuplicates(InIt first, InIt last, OutIt output)
 
 int section2_1_1::removeDuplicates(vector<int>& nums)
 {
-  if (nums.empty())
+ if (nums.empty())
     return 0;
   int index = 0;
   for (int i = 1; i < nums.size(); i++)

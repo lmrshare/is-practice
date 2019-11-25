@@ -10,7 +10,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall -std=c++11")
 set(CH2_SRC src)
 set(CH2_HEAD head)
 
-set(SRC_LIST main.cpp  ${CH2_SRC}/ch2.cpp)
+set(SRC_LIST ${CH2_SRC}/ch2.cpp main.cpp)
 
 include_directories(${CH2_HEAD})
 add_executable(ch2 ${SRC_LIST})

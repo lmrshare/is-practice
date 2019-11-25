@@ -7,6 +7,10 @@
 using namespace std;
 
 namespace p3{
+    bool isPalindrome(string s)
+    {
+        return true;
+    }
     //计算进位和当前值
     string addBinary(string a, string b)
     {

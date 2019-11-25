@@ -44,7 +44,7 @@ void test_section2_1_1()
   nums.push_back(1);
   nums.push_back(1);
   nums.push_back(2);
-  int N = C->removeDuplicates3(nums);
+  int N = C->removeDuplicates(nums);
   cout<<"length: "<<N<<endl;
   for(size_t i = 0; i < N; ++i)
   {

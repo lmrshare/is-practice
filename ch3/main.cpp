@@ -1,6 +1,8 @@
 #include "ch3.h"
 using namespace std;
 
+//3.1
+void test_isPalindrome();
 //3.2
 void test_strStr();
 int strStr(const string& haystack, const string& needle);
@@ -19,7 +21,7 @@ void test_wildcard_matching();
 
 int main ()
 {
-  test_longest_palindromic_substring();
+  test_isPalindrome();
   return 0;
 }
 
@@ -43,6 +45,12 @@ void test_addBinary()
     std::cout << "The sum binary string is: " << result << std::endl;
 }
 
+void test_isPalindrome()
+{
+    string haystack = "A man, a plan, a canal: Panama";
+    bool res = p3::isPalindrome(haystack);
+    cout << "res: " << res << endl;
+}
 void test_strStr()
 {
     string haystack = "hello the next task";
