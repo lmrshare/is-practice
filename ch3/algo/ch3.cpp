@@ -8,7 +8,76 @@ namespace p3
 {
     bool isPalindrome(string s)
     {
-        return true;
+        size_t num = s.size();
+        if (num == 0)
+            return true;
+        int i = 0;
+        int j = num-1;
+        bool res = true;
+        while(i <= j)
+        {
+            if ((s[i] < '0' || s[i] > '9') &&
+                (s[i] < 'a' || s[i] > 'z') &&
+               (s[i] < 'A' || s[i] > 'Z'))
+             {
+                 i++;
+                 continue;
+             }
+            if ((s[j] < '0' || s[j] > '9') &&
+                (s[j] < 'a' || s[j] > 'z') &&
+               (s[j] < 'A' || s[j] > 'Z'))
+             {
+                 j--;
+                 continue;
+             }
+             if (s[i] >= '0' && s[i] <= '9')
+             {
+                 if (s[i] != s[j])
+                 {
+                     res = false;
+                     break;
+                 }
+             }
+             else if (s[i] >= 'a' && s[i] <= 'z')
+             {
+                 if (s[j] >= 'a' && s[j] <= 'z' && s[i] != s[j])
+                 {
+                     res = false;
+                     break;
+                 }
+                 else if (s[j] >= 'A' && s[j] <= 'Z' && s[i]-'a' != s[j]-'A')
+                 {
+                     res = false;
+                     break;
+                 }
+                 else if (s[j] >= '0' && s[j] <= '9')
+                 {
+                     res = false;
+                     break;
+                 }
+             }
+             else
+             {
+                 if (s[j] >= 'a' && s[j] <= 'z' && s[i]-'A' != s[j]-'a')
+                 {
+                     res = false;
+                     break;
+                 }
+                 else if (s[j] >= 'A' && s[j] <= 'Z' && s[i] != s[j])
+                 {
+                     res = false;
+                     break;
+                 }
+                 else if (s[j] >= '0' && s[j] <= '9')
+                 {
+                     res = false;
+                     break;
+                 }
+             }
+             i++;
+             j--;
+        }
+        return res;
     }
     //计算进位和当前值
     string addBinary(string a, string b)
