@@ -23,6 +23,9 @@ namespace std
 };
 
 namespace p3{
+    /*
+        Structure 
+    */
     struct random_list_node
     {
         int label;
@@ -47,6 +50,8 @@ namespace p3{
     int myAtoi(const string& str);
     //3.4 Add Binary: lcc67(二进制求和)
     string addBinary(string a, string b);
+    //3.7 lcc44(通配符匹配)
+    bool isMatch(string s, string p);
     //3.5 longest palindromic substring: lcc516(最长回文子序列)
     class Solution
     {
@@ -84,8 +89,5 @@ namespace p3{
         unordered_map<pair<Iterator, Iterator>, string> cache;
         unordered_map<pair<string::const_iterator, string::const_iterator>, string>cache1;//not use, just for test
     };
-    //3.7 lcc44(通配符匹配)
-    bool isMatch(string s, string p);
 };
-
 #endif
