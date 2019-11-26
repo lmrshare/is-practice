@@ -2,11 +2,10 @@
 #include <algorithm>
 #include <numeric>
 #include <assert.h>
-#include <iostream>
 #include <climits>
-using namespace std;
 
-namespace p3{
+namespace p3
+{
     bool isPalindrome(string s)
     {
         return true;

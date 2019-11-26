@@ -1,6 +1,6 @@
 #ifndef CH3
 #define CH3
-#include<iostream>
+#include <iostream>
 #include <random>
 #include <algorithm>
 #include <iterator>
@@ -22,7 +22,8 @@ namespace std
     };
 };
 
-namespace p3{
+namespace p3
+{
     /*
         Structure 
     */
