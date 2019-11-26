@@ -9,7 +9,6 @@
 
 using namespace std;
 
-
 typedef string::const_iterator Iterator;
 namespace std
 {
@@ -37,6 +36,9 @@ namespace p3{
         list_node* next;
         list_node(int x) : val(x), next(nullptr) {};
     };
+    /*
+        Algorithm Interface
+    */
     //3.1: lcc125(验证回文串)
     bool isPalindrome(string s);
     //3.2: lcc28(实现 strStr())

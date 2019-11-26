@@ -1,16 +1,19 @@
 cmake_minimum_required(VERSION 3.14)
 project(ch3)
 
+#compile setting
 set(CMAKE_BUILD_TYPE "Debug")
-#set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
-#set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb -std=c++11")
 set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall -std=c++11")
 
-set(CH3_SRC src)
-set(CH3_HEAD head)
+#algorithm files
+set(ALGO_H algo_h)
+set(ALGO_IMPL algo)
+include_directories(${ALGO_H})
 
-set(SRC_LIST ${CH3_SRC}/ch3.cpp main.cpp)
-
-include_directories(${CH3_HEAD})
-add_executable(ch3 ${SRC_LIST})
+#demo
+set(SRC_LIST ${ALGO_IMPL}/ch3.cpp demo/main.cpp)
+add_executable(demo ${SRC_LIST})
+#binary
+set(LCC125_LIST ${ALGO_IMPL}/ch3.cpp lcc125/lcc125.cpp)
+add_executable(lcc125 ${LCC125_LIST})
