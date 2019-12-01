@@ -212,8 +212,41 @@ namespace p3
 
     bool isMatch(string s, string p)
     {
-        cout << "TODO\n";
-        return true;
+        size_t s_len = s.size();
+        size_t p_len = p.size();
+        bool dp[p_len+1][s_len+1];
+        dp[0][0] = true;
+        for (size_t i =1; i <= s_len; ++i)
+            dp[0][i] = false;
+        for (size_t j = 1; j <= p_len; ++j)
+        {
+            for (size_t i = 0; i <= s_len; ++i)
+            {
+                if (i == 0)
+                {
+                    if (p[j-1] != '*')
+                        dp[j][i] = false;
+                    else
+                        dp[j][i] = dp[j-1][i];
+                }
+                else
+                {
+                    if (p[j-1] >= 'a' && p[j-1] <= 'z')
+                    {
+                        dp[j][i] = p[j-1] == s[i-1] && dp[j-1][i-1];
+                    }
+                    else if (p[j-1] == '?')
+                        dp[j][i] =  dp[j-1][i-1];
+                    else
+                    {
+                        dp[j][i] = false;
+                        if (dp[j][i-1] || dp[j-1][i-1] || dp[j-1][i])
+                            dp[j][i] = true;
+                    }
+                }
+            }
+        }
+        return dp[p_len][s_len];
     }
     
 };
