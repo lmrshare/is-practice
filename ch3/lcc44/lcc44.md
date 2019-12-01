@@ -26,7 +26,7 @@ case 1: p[j] == '?'
     dp[j][i] = dp[j-1][i-1]
 case 2: p[j] == 字母
     dp[j][i] = p[j] == s[i] && dp[j-1][i-1]
-case 2: p[j] == '*'
+case 3: p[j] == '*'
     dp[j][i] = dp[j][i-1] || dp[j-1][i] || dp[j-1][i-1]
 ```
 
