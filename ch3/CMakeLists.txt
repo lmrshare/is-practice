@@ -17,3 +17,7 @@ add_executable(demo ${SRC_LIST})
 #binary
 set(LCC125_LIST ${ALGO_IMPL}/ch3.cpp lcc125/lcc125.cpp)
 add_executable(lcc125 ${LCC125_LIST})
+set(LCC28_LIST ${ALGO_IMPL}/ch3.cpp lcc28/lcc28.cpp)
+add_executable(lcc28 ${LCC28_LIST})
+set(LCC44_LIST ${ALGO_IMPL}/ch3.cpp lcc44/lcc44.cpp)
+add_executable(lcc44 ${LCC44_LIST})

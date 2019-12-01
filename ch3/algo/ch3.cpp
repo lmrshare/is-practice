@@ -144,26 +144,76 @@ namespace p3
         return val * sign;
     }
     
-    bool isMatch(string s, string p)
+    /* 超时 */
+    bool isMatch_timeout(string s, string p)
     {
-#if 0//没做完
-        int len_s = s.length();
-        int len_p = p.length();
-        if(len_s == 0)
+        size_t s_len = s.size();
+        size_t p_len = p.size();
+        if (s_len != 0 && p_len == 0)
+            return false;
+        if (s_len == 0 && p_len == 0)
+            return true;
+        if (p[0] >= 'a' && p[0] <= 'z')
         {
-            if(len_P == 0) return true;
-            else if(len_p == 1 && p[0] == '*') return true;
-            else if(p[len_p-1] == '*') return isMatch(s, s.substr(0, len_p-1));
-            {
-                if(p[len_p - 1] ==)
-                    }
+            if (s_len == 0)
+                return false;
+            if (p[0] == s[0])
+                return isMatch(s.substr(1, s_len-1), p.substr(1, p_len-1));
+            else
+                return false;
+        }
+        else if (p[0] == '?')
+        {
+            if (s_len == 0)
+                return false;
+            return isMatch(s.substr(1, s_len-1), p.substr(1, p_len-1));
         }
         else
         {
-            
+            if (s_len == 0)
+            {
+                if (p_len > 1 && p[1] != '*')
+                    return false;
+                if (p_len > 1 && p[1] == '*')
+                    return isMatch(s, p.substr(2, p_len-2));
+                return true;
+            }
+            if (p_len == 1)
+                return true;
+            else if (p[1] >= 'a' && p[1] <= 'z')
+            {
+                for (size_t i = 0; i < s_len; ++i)
+                {
+                    if (s[i] == p[1])
+                    {
+                        if (isMatch(s.substr(i+1, s_len-i), p.substr(2, p_len-2)))
+                            return true;
+                        else
+                            continue;
+                    }
+                }
+                return false;
+            }
+            else if (p[1] == '?')
+            {
+                for (size_t i = 0; i < s_len; ++i)
+                {
+                    if (isMatch(s.substr(i+1, s_len-i), p.substr(2, p_len-2)))
+                        return true;
+                    else
+                        continue;
+                }
+                return false;
+            }
+            else
+                return isMatch(s, p.substr(1, p_len-1));
         }
-        
-#endif
+    }
+
+    bool isMatch(string s, string p)
+    {
+        cout << "TODO\n";
+        return true;
     }
     
 };
