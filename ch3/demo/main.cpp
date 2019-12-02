@@ -37,7 +37,7 @@ void test_addBinary()
 
 void test_myAtoi()
 {
-    string str = "1000";
+    string str = "2147483646";
     int value = p3::myAtoi(str);
     std::cout << "The str is: " << str << std::endl;
     std::cout << "The val is: " << value << std::endl;

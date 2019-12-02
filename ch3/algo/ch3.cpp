@@ -121,7 +121,7 @@ namespace p3
     
     int myAtoi(const string& str)
     {
-        int val = 0;
+        long val = 0;
         int sign = 1;
         const int num = str.length();
         int i = 0;
