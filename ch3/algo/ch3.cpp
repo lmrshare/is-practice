@@ -84,8 +84,8 @@ namespace p3
     {
         string result;
         int n = a.size() > b.size() ? a.size() : b.size();
-        reverse(a.begin(), a.begin());
-        reverse(b.begin(), b.begin());
+        reverse(a.begin(), a.end());
+        reverse(b.begin(), b.end());
         int carry = 0;
         for(int i = 0; i < n; ++i)
         {

@@ -25,22 +25,6 @@ namespace std
 namespace p3
 {
     /*
-        Structure 
-    */
-    struct random_list_node
-    {
-        int label;
-        random_list_node* next;
-        random_list_node* random;
-        random_list_node(int label) : label(label), next(nullptr), random(nullptr) {};
-    };
-    struct list_node
-    {
-        int val;
-        list_node* next;
-        list_node(int x) : val(x), next(nullptr) {};
-    };
-    /*
         Algorithm Interface
     */
     bool isPalindrome(string s);

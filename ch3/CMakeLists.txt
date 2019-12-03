@@ -11,10 +11,7 @@ set(ALGO_H algo_h)
 set(ALGO_IMPL algo)
 include_directories(${ALGO_H})
 
-#demo
-set(SRC_LIST ${ALGO_IMPL}/ch3.cpp demo/main.cpp)
-add_executable(demo ${SRC_LIST})
-#binary
+#all binary
 set(LCC125_LIST ${ALGO_IMPL}/ch3.cpp lcc125/lcc125.cpp)
 add_executable(lcc125 ${LCC125_LIST})
 set(LCC28_LIST ${ALGO_IMPL}/ch3.cpp lcc28/lcc28.cpp)
@@ -23,3 +20,7 @@ set(LCC44_LIST ${ALGO_IMPL}/ch3.cpp lcc44/lcc44.cpp)
 add_executable(lcc44 ${LCC44_LIST})
 set(LCC8_LIST ${ALGO_IMPL}/ch3.cpp lcc8/lcc8.cpp)
 add_executable(lcc8 ${LCC8_LIST})
+set(LCC67_LIST ${ALGO_IMPL}/ch3.cpp lcc67/lcc67.cpp)
+add_executable(lcc67 ${LCC67_LIST})
+set(LCC516 ${ALGO_IMPL}/ch3.cpp lcc516/lcc516.cpp)
+add_executable(lcc516 ${LCC516})
