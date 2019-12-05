@@ -37,6 +37,7 @@ namespace p3
     //3.7 lcc44(通配符匹配)
     bool isMatch(string s, string p);
     bool isMatch_timeout(string s, string p);
+    int longestPalindromeSubseq(string s);
     //3.5 longest palindromic substring: lcc516(最长回文子序列)
     class Solution
     {

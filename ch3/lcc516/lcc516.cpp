@@ -13,10 +13,9 @@ int main ()
 void test_longest_palindromic_substring()
 {
     //TODO
-    string s = "aabbssb";
-    p3::Solution so = p3::Solution();
-    string res = so.longestPalindrome(s);
-    std::cout << ">>>The original string is: " << s << std::endl;
+    string s = "bbbab";
+    int res = p3::longestPalindromeSubseq(s);
+    std::cout << "The original string is: " << s << std::endl;
     std::cout << "The palindromic string is: " << res << std::endl;
     
 }

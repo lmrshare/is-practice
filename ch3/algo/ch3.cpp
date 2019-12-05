@@ -248,5 +248,44 @@ namespace p3
         }
         return dp[p_len][s_len];
     }
-    
+    bool isPalindrome(string str, char c)
+    {
+        return true;
+    }
+
+    int longestPalindromeSubseq(string s)
+    {
+        size_t N = s.size();
+        if (N == 0)
+            return 0;
+        int dp[N][N];
+        for (size_t i = 0; i < N; ++i)
+            dp[i][i] = 1;
+        for (int i = N-1; i>=0; --i)
+        {
+            for (int j = i+1; j < N; ++j)
+            {
+                if (s[i] == s[j])
+                {
+                    if (j == i+1)
+                        dp[i][j] = 2;
+                    else
+                        dp[i][j] = dp[i+1][j-1] + 2;
+                }
+                else
+                {
+                    if (j == i+1)
+                    {
+                        dp[i][j] = 1;
+                        continue;
+                    }
+                    dp[i][j] = dp[i][j-1];
+                    if (dp[i][j] < dp[i+1][j])
+                        dp[i][j] = dp[i+1][j];
+                }
+                
+            }
+        }
+        return dp[0][N-1];
+    }
 };
