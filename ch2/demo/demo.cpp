@@ -1,9 +1,6 @@
 #include "ch2.h"
+using namespace p2;
 
-template<typename T>
-void print_vector(const vector<T>& nums);
-template<typename T>
-void print_matrix(const vector<vector<T> >& nums);
 void test_section2_1_1();
 void test_section2_1_2();
 void test_setction2_1_3();
@@ -137,25 +134,8 @@ void test_setction2_1_6()
   print_vector<int>(nums);
   cout << "The length of the longest consecutive elements sequence is: " << longest << endl;
 }
-template<typename T>
-void print_vector(const vector<T>& nums)
-{
-  cout << "[ ";
-  for(auto i : nums)
-    cout << i << " ";
-  cout << "]"<< endl;
-}
-template<typename T>
-void print_matrix(const vector<vector<T> >& nums)
-{
-  cout << "[" << endl;
-  for(int i = 0; i < nums.size();++i)
-  {
-    cout << " ";
-    print_vector<T>(nums[i]);
-  }
-  cout << "]" << endl;
-}
+
+
 void test_setction2_1_7()
 {
   section2_1_7* C = new section2_1_7();
