@@ -49,16 +49,12 @@ namespace p2
         random_list_node(int label) : label(label), next(nullptr), random(nullptr) {};
     };
 
-    class section2_1_1
-    {
-      public:
-        //2.1.1 Remove Duplicates from Array: duplicate degree 1(lcc26)
-        int removeDuplicates(vector<int>& nums);
-        int removeDuplicates2(vector<int>& nums);
-        int removeDuplicates3(vector<int>& nums);
-        template<typename InIt,typename OutIt>
-        OutIt removeDuplicates(InIt first, InIt last, OutIt output);
-    };
+    /* algo interface*/
+
+    /* Remove Duplicates from Array: duplicate degree 1(lcc26) */
+    int removeDuplicates_lcc26(vector<int>& nums);
+    int removeDuplicates2_lcc26(vector<int>& nums);
+
     class section2_1_2
     {
       public:

@@ -7,18 +7,7 @@
 
 namespace p2
 {
-    template<typename InIt,typename OutIt>
-    OutIt section2_1_1::removeDuplicates(InIt first, InIt last, OutIt output)
-    {
-      while (first != last)
-      {
-        *output++ = *first;//1. *output = *first; 2. output++
-        first = upper_bound(first, last, *first);
-      }
-        return output;
-    }
-    
-    int section2_1_1::removeDuplicates(vector<int>& nums)
+    int removeDuplicates_lcc26(vector<int>& nums)
     {
      if (nums.empty())
         return 0;
@@ -30,14 +19,12 @@ namespace p2
       }
       return index + 1;
     }
-    int section2_1_1::removeDuplicates2(vector<int>& nums)
+
+    int removeDuplicates2_lcc26(vector<int>& nums)
     {
       return distance(nums.begin(), unique(nums.begin(), nums.end()));
     }
-    int section2_1_1::removeDuplicates3(vector<int>& nums)
-    {
-      return distance(nums.begin(), removeDuplicates(nums.begin(), nums.end(), nums.begin()    )  );
-    }
+
     int section2_1_2::removeDuplicates(vector<int>& nums)
     {
       size_t N = nums.size();
@@ -441,7 +428,7 @@ namespace p2
       if(nums.size() < 3) return result;
     #if 1
       sort(nums.begin(),nums.end());//O(n^2)
-    
+
       auto last = nums.end();
       for(auto i = nums.begin(); i < last - 2; ++i)
       {
@@ -1058,7 +1045,7 @@ namespace p2
       }
       return head;
     }
-    
+
     list_node* section2_2_4::delete_duplicates(lsit_node* head)
     {
       list_node* i = head, j = head, prev = NULL;
@@ -1160,7 +1147,7 @@ namespace p2
       }
       return head;
     }
-    
+
     random_list_node* section2_2_10::copy_random_list(random_list_node* head)
     {
     #if 0
@@ -1178,6 +1165,6 @@ namespace p2
     #endif
         return nullptr;
     }
-    
+
     #endif
 }

@@ -14,3 +14,5 @@ include_directories(${ALGO_H})
 # #all binary
 set(DEMO ${ALGO_IMPL}/ch2.cpp demo/demo.cpp)
 add_executable(demo ${DEMO})
+set(LCC26 ${ALGO_IMPL}/ch2.cpp lcc26/lcc26.cpp)
+add_executable(lcc26 ${LCC26})

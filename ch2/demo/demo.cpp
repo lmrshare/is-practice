@@ -1,7 +1,6 @@
 #include "ch2.h"
 using namespace p2;
 
-void test_section2_1_1();
 void test_section2_1_2();
 void test_setction2_1_3();
 void test_setction2_1_4();
@@ -30,31 +29,10 @@ void test_swap_pairs();//2.2.8
 void test_section2_2_10();
 int main()
 {
-  test_section2_1_1();
+  test_section2_1_2();
   return 0;
 }
-void test_section2_1_1()
-{
-  cout<<"Test section2.1.1"<<endl;
-  section2_1_1* C = new section2_1_1();
-  vector<int> nums(0);
-  nums.push_back(1);
-  nums.push_back(1);
-  nums.push_back(2);
-  int N = C->removeDuplicates(nums);
-  cout<<"length: "<<N<<endl;
-  for(size_t i = 0; i < N; ++i)
-  {
-    cout<<nums[i]<<" ";
-  }
-  cout<<endl<<"-------------"<<endl;
-  for(size_t i = 0; i < nums.size(); ++i)
-  {
-    cout<<nums[i]<<" ";
-  }
-  cout<<endl;
-  delete C;
-}
+
 void test_section2_1_2()
 {
   cout<<"Test section2.1.2"<<endl;
