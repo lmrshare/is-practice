@@ -38,12 +38,15 @@ void test_section2_1_2()
   cout<<"Test section2.1.2"<<endl;
   section2_1_2* C = new section2_1_2();
   vector<int> nums(0);
+  //case 1
+  //nums.push_back(1);
+  //nums.push_back(1);
+  //nums.push_back(1);
+  //nums.push_back(2);
+  //nums.push_back(2);
+  //nums.push_back(3);
+  //case 2
   nums.push_back(1);
-  nums.push_back(1);
-  nums.push_back(1);
-  nums.push_back(2);
-  nums.push_back(2);
-  nums.push_back(3);
   cout<<"-------------"<<endl<<"Original length: "<<nums.size()<<endl;
   for(size_t i = 0; i < nums.size(); ++i)
   {

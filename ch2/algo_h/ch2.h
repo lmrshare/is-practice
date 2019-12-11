@@ -63,6 +63,7 @@ namespace p2
         int removeDuplicates2(vector<int>& nums);
         // I make the function
         int removeDuplicates3(vector<int>& nums);
+        int removeDuplicates3_bak(vector<int>& nums);
     };
     //begin----------------------
     class section2_1_3

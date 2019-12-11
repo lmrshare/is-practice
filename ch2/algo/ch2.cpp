@@ -58,7 +58,7 @@ namespace p2
       }
       return index;
     }
-    int section2_1_2::removeDuplicates3(vector<int>& nums)
+    int section2_1_2::removeDuplicates3_bak(vector<int>& nums)
     {
       int n = nums.size();
       if(n <= 2)
@@ -1167,4 +1167,30 @@ namespace p2
     }
 
     #endif
+
+    int section2_1_2::removeDuplicates3(vector<int>& nums)
+    {
+        if (nums.empty())
+          return 0;
+
+        int index = 0;
+        int buf_len = 2;
+        int curr_num = 1;
+        for (int i = 1; i < nums.size(); ++i)
+        {
+            if (nums[i] != nums[index])
+            {
+                nums[++index] = nums[i];
+                curr_num = 1;
+            }
+            else
+            {
+              curr_num++;
+              if (curr_num == buf_len)
+                nums[++index] = nums[i];
+            }
+            
+        }
+        return index+1;
+    }
 }
