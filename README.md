@@ -140,3 +140,4 @@
 ## TODO
 
 + 刷4月题目、整理ch2
++ a, b, cnta, cntb, a, b都是质数(2<a<=b<30000), cnta为a的需求，cntb为b的需求, 1<=cnta, 1<=cntb: eg: 3, 1, 2, 3, 求最小k

@@ -15,5 +15,7 @@ namespace april_algo
     */
     //3.3: lcc8(字符串转换整数 (atoi)
     int lengthOfLongestSubstring(string s);
+    //暂时未分类
+    int leastKMakeA_B_cntA_cntB(int a, int b, int cnta, int cntb);
 };
 #endif
