@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../algo_h/ch3.h
+iostream
+-
+random
+-
+algorithm
+-
+iterator
+-
+unordered_map
+-
+list
+-
+
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/algo/ch3.cpp
+ch3.h
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/algo/ch3.h
+algorithm
+-
+numeric
+-
+assert.h
+-
+climits
+-
+
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/lcc8/lcc8.cpp
+ch3.h
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/lcc8/ch3.h
+

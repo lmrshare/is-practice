@@ -1,0 +1,3 @@
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/build/CMakeFiles/rebuild_cache.dir
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/build/CMakeFiles/edit_cache.dir
+/Users/linmengran-mac2/work/2.code_practice/is-practice/apri_prac/build/CMakeFiles/hwlcc3.dir
