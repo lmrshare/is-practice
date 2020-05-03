@@ -7,8 +7,25 @@
 namespace april_algo
 {
     int lengthOfLongestSubstring(string s) {
-        //TODO
-        return -1;
+        if (s.length() == 0 || s.length() == 1)
+            return s.length();
+        
+        int P[s.length()];
+        int S[s.length()];
+        P[0] = 1;
+        S[0] = 1;
+        for (size_t i = 1; i < s.length(); ++i) {
+            P[i] = P[i-1]+1;
+            for (size_t j = 0; j < i; ++j) {
+                if (s[j] == s[i]) {
+                    P[i] = 1;
+                    break;
+                }
+            }
+
+            S[i] = S[i-1] > P[i] ? S[i-1] : P[i];
+        }
+        return S[s.length()-1];
     }
     //暂时未分类
     int leastKMakeA_B_cntA_cntB(int a, int b, int cnta, int cntb) {

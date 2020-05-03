@@ -7,13 +7,14 @@ void test_leastKMakeA_B_cntA_cntB();
 
 int main ()
 {
-  test_leastKMakeA_B_cntA_cntB();
+  test_lengthOfLongestSubstring();
   return 0;
 }
 
 void test_lengthOfLongestSubstring()
 {
-    string str = "2147483646";
+    string str;
+    cin >> str;
     int value = april_algo::lengthOfLongestSubstring(str);
     cout << "value: " << value << endl;
 }

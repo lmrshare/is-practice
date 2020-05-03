@@ -133,11 +133,11 @@
 + lcc199(二叉树的右视图), 在leetcode没找到左视图，但我觉得差不多, 这两道题的代码都写了
 + all_leaf(在leetcode妹搜到，忘记当时解决什么问题了, 感觉是与左视图、右视图相似的递补视图，需要回忆,TODO, \*\*\*)
 
-## april_prac
+## may_prac
 
-+ 四月(https://leetcode-cn.com/company/huawei/), 根据标签(状态：未尝试、尝试中， 难度：中等、困难, 出题指数：倒排)筛选后，逐个刷, 然后在通用列表中刷相似的会员题
++ 五月(https://leetcode-cn.com/company/huawei/), 根据标签(状态：未尝试、尝试中， 难度：中等、困难, 出题指数：倒排)筛选后，逐个刷, 然后在通用列表中刷相似的会员题
 
 ## TODO
 
-+ 刷4月题目、整理ch2
++ 刷5月题目、整理ch2
 + a, b, cnta, cntb, a, b都是质数(2<a<=b<30000), cnta为a的需求，cntb为b的需求, 1<=cnta, 1<=cntb: eg: 3, 1, 2, 3, 求最小k
