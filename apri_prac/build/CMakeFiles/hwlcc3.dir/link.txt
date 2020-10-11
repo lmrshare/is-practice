@@ -1,1 +1,0 @@
-/usr/local/bin/g++-8   -O0 -Wall -g -ggdb -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/hwlcc3.dir/algo/april_algo.cpp.o CMakeFiles/hwlcc3.dir/hwlcc3/hwlcc3.cpp.o  -o hwlcc3 
