@@ -1,0 +1,4 @@
+/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build/CMakeFiles/rebuild_cache.dir
+/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build/CMakeFiles/edit_cache.dir
+/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build/CMakeFiles/lcc26.dir
+/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build/CMakeFiles/demo.dir

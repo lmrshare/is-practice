@@ -2,7 +2,7 @@
 
 &emsp;&emsp;leetcode练习
 
-+ ps: 将ch2中的CMakeLists.txt和.vscode拷贝到其他路径下, 然后修改CMakeLists.txt和.vscode中的ch2字段为ch4，即可用vscode进行编译, 调试，
++ ps: 将ch2中的CMakeLists.txt和.vscode拷贝到其他路径下, 然后修改CMakeLists.txt和.vscode中的ch2字段为目标项目名，即可用vscode进行编译, 调试，
 
 ## demo: 工程样例
 ## bit-operation: lcc136(只出现一次的数字)、lcc169(只出现一次的数字 II, 统计每一位1的个数, 看是否可以对3整除)

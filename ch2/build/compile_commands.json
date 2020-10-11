@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build",
+  "command": "/usr/local/bin/g++-8   -I/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo_h   -O0 -Wall -g -ggdb -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -o CMakeFiles/lcc26.dir/algo/ch2.cpp.o -c /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo/ch2.cpp",
+  "file": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo/ch2.cpp"
+},
+{
+  "directory": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build",
+  "command": "/usr/local/bin/g++-8   -I/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo_h   -O0 -Wall -g -ggdb -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -o CMakeFiles/lcc26.dir/lcc26/lcc26.cpp.o -c /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/lcc26/lcc26.cpp",
+  "file": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/lcc26/lcc26.cpp"
+},
+{
+  "directory": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build",
+  "command": "/usr/local/bin/g++-8   -I/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo_h   -O0 -Wall -g -ggdb -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -o CMakeFiles/demo.dir/algo/ch2.cpp.o -c /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo/ch2.cpp",
+  "file": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo/ch2.cpp"
+},
+{
+  "directory": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/build",
+  "command": "/usr/local/bin/g++-8   -I/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/algo_h   -O0 -Wall -g -ggdb -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -o CMakeFiles/demo.dir/demo/demo.cpp.o -c /Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/demo/demo.cpp",
+  "file": "/Users/linmengran-mac2/work/2.code_practice/is-practice/ch2/demo/demo.cpp"
+}
+]
