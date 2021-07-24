@@ -2,9 +2,6 @@
 
 &emsp;&emsp;leetcode练习
 
-+ ps: 将ch2中的CMakeLists.txt和.vscode拷贝到其他路径下, 然后修改CMakeLists.txt和.vscode中的ch2字段为目标项目名，即可用vscode进行编译, 调试，
-
-## demo: 工程样例
 ## bit-operation: lcc136(只出现一次的数字)、lcc169(只出现一次的数字 II, 统计每一位1的个数, 看是否可以对3整除)
 ## l109: 有序链表转换二叉搜索树
 ## l312: 戳气球
@@ -133,11 +130,12 @@
 + lcc199(二叉树的右视图), 在leetcode没找到左视图，但我觉得差不多, 这两道题的代码都写了
 + all_leaf(在leetcode妹搜到，忘记当时解决什么问题了, 感觉是与左视图、右视图相似的递补视图，需要回忆,TODO, \*\*\*)
 
-## may_prac
+## 工程创建方法: 
 
-+ 五月(https://leetcode-cn.com/company/huawei/), 根据标签(状态：未尝试、尝试中， 难度：中等、困难, 出题指数：倒排)筛选后，逐个刷, 然后在通用列表中刷相似的会员题
-
-## TODO
-
-+ 刷5月题目、整理ch2
-+ a, b, cnta, cntb, a, b都是质数(2<a<=b<30000), cnta为a的需求，cntb为b的需求, 1<=cnta, 1<=cntb: eg: 3, 1, 2, 3, 求最小k
+```
+1. 拷配置：将ch2中的CMakeLists.txt和.vscode拷贝到其他路径下, 
+2. 改配置：修改CMakeLists.txt和.vscode中的ch2字段为目标项目名，即可用vscode进行编译, 调试，
+3. 打开项目：用VS code打开项目路径，如：ch2
+4. 编译：shift+command+p，选择编译
+5. debug运行：command + R
+```
