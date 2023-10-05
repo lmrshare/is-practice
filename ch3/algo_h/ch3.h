@@ -25,5 +25,7 @@ namespace p3
     bool isMatch_timeout(string s, string p);
     // lcc516(最长回文子序列)
     int longestPalindromeSubseq(string s);
+    //lcc135, candy(hard)
+    int candy(vector<int>& ratings);
 };
 #endif

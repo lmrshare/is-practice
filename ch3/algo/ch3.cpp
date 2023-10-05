@@ -288,4 +288,49 @@ namespace p3
         }
         return dp[0][N-1];
     }
+
+    int candy(vector<int>& ratings)
+    {
+        if (ratings.size() == 1)
+            return 1;
+        if (ratings.size() == 0)
+            return 0;
+        vector<int> candies(ratings.size(), 1);
+        int min_nums = ratings.size();
+        for (int i = 0;  i <= ratings.size()-2; ++i)
+        {
+            //cout << ">>>i: " << i <<", ratings.eize(): " << ratings.size() << endl;
+            if ((ratings[i] > ratings[i+1]) &&
+                (candies[i] == candies[i+1]))
+            {
+                candies[i]++;
+                min_nums++;
+                continue;
+            }
+            if ((ratings[i] < ratings[i+1]) &&
+                (candies[i] >= candies[i+1]))
+            {
+                int delta = candies[i] - candies[i+1] + 1;
+                candies[i+1] +=  delta;
+                min_nums += delta;
+                continue;
+            }
+        }
+        for (int i = ratings.size()-1;  i > 0 ; --i)
+        {
+            if ((ratings[i] < ratings[i-1]) &&
+                (candies[i] >= candies[i-1]))
+            {
+                int delta = candies[i] - candies[i-1] + 1;
+                candies[i-1] +=  delta;
+                min_nums += delta;
+                continue;
+            }
+        }
+        for (int i = 0;  i <= candies.size()-1; ++i)
+        {
+            cout << "candies[" << i <<"]: " << candies[i] << endl;
+        }
+        return min_nums;
+    }
 };
